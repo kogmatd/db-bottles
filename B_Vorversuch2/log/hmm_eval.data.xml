@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+	<INSTANCE name="idLog" class="data">
+		<FIELD name="cunit" type="char[10]" arrlen="10"></FIELD>
+		<FIELD name="rwid" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="descr3" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="cofs" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="runit" type="char[10]" arrlen="10">ms</FIELD>
+		<FIELD name="cinc" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="nrec" type="int">24</FIELD>
+		<FIELD name="maxrec" type="int">24</FIELD>
+		<FIELD name="dim" type="int">5</FIELD>
+		<FIELD name="rtext" type="text">0,LabelDisplay
+1,LabelDisplay
+2,Oscillogram
+3,Oscillogram
+</FIELD>
+		<FIELD name="noffset" type="int">0</FIELD>
+		<FIELD name="descr0" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="rinc" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="descr1" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="descr4" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="ftext" type="text"></FIELD>
+		<FIELD name="rofs" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="nblock" type="int">0</FIELD>
+		<FIELD name="vrtext" type="text"></FIELD>
+		<FIELD name="reclen" type="int">72</FIELD>
+		<FIELD name="vunit" type="char[10]" arrlen="10"></FIELD>
+		<FIELD name="descr2" type="double">0.0000000000000000e+000</FIELD>
+		<FIELD name="check" type="short">0</FIELD>
+		<TABLE name="-HMM_eval_fnc.-EL.idLog.~table">
+			<COMP name="TIME" type="char[32]"/>
+			<COMP name="HMM" type="char[16]"/>
+			<COMP name="nPAR" type="long"/>
+			<COMP name="nGSv" type="long"/>
+			<COMP name="xRT" type="double"/>
+			<REC>
+				<CELL>2015-11-20-190448 @ $HOSTNAME</CELL>
+				<CELL>0_1</CELL>
+				<CELL>32620</CELL>
+				<CELL>100</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190450 @ $HOSTNAME</CELL>
+				<CELL>0_2</CELL>
+				<CELL>32620</CELL>
+				<CELL>100</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190452 @ $HOSTNAME</CELL>
+				<CELL>0_3</CELL>
+				<CELL>32620</CELL>
+				<CELL>100</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190453 @ $HOSTNAME</CELL>
+				<CELL>1_1</CELL>
+				<CELL>65220</CELL>
+				<CELL>200</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190457 @ $HOSTNAME</CELL>
+				<CELL>1_2</CELL>
+				<CELL>65220</CELL>
+				<CELL>200</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190500 @ $HOSTNAME</CELL>
+				<CELL>1_3</CELL>
+				<CELL>65220</CELL>
+				<CELL>200</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190504 @ $HOSTNAME</CELL>
+				<CELL>1_4</CELL>
+				<CELL>65220</CELL>
+				<CELL>200</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190507 @ $HOSTNAME</CELL>
+				<CELL>1_5</CELL>
+				<CELL>65220</CELL>
+				<CELL>200</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190508 @ $HOSTNAME</CELL>
+				<CELL>2_0</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190514 @ $HOSTNAME</CELL>
+				<CELL>2_1</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190520 @ $HOSTNAME</CELL>
+				<CELL>2_2</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190525 @ $HOSTNAME</CELL>
+				<CELL>2_3</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190531 @ $HOSTNAME</CELL>
+				<CELL>2_4</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190537 @ $HOSTNAME</CELL>
+				<CELL>2_5</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190543 @ $HOSTNAME</CELL>
+				<CELL>2_6</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190549 @ $HOSTNAME</CELL>
+				<CELL>2_7</CELL>
+				<CELL>130420</CELL>
+				<CELL>400</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190600 @ $HOSTNAME</CELL>
+				<CELL>3_0</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190611 @ $HOSTNAME</CELL>
+				<CELL>3_1</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190622 @ $HOSTNAME</CELL>
+				<CELL>3_2</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190633 @ $HOSTNAME</CELL>
+				<CELL>3_3</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190644 @ $HOSTNAME</CELL>
+				<CELL>3_4</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190655 @ $HOSTNAME</CELL>
+				<CELL>3_5</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190706 @ $HOSTNAME</CELL>
+				<CELL>3_6</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+			<REC>
+				<CELL>2015-11-20-190717 @ $HOSTNAME</CELL>
+				<CELL>3_7</CELL>
+				<CELL>260820</CELL>
+				<CELL>800</CELL>
+				<CELL>0.0000000000000000e+000</CELL>
+			</REC>
+		</TABLE>
+	</INSTANCE>
