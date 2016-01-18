@@ -376,11 +376,11 @@ public static String transform(File logfile) {
 			
 			case "2":
 				{ // AUSWERTUNG LOGDATEI
-					File dir = new File ("C:\\Users\\wawra\\workspace\\uasr-data\\bottles\\common\\log\\");
+			        String uasr = System.getenv("UASR_HOME");
+					File dir = new File (uasr + "-data\\bottles\\");
 					System.out.print("Logdatei-");
 					File logfile = filechoose(dir, sc);
 			        String out = transform (logfile); //hier die eigentliche Verarbeitung
-					dir = new File ("C:\\Users\\wawra\\workspace\\uasr-data\\bottles\\common\\log\\");
 					boolean jn = true;
 					while (jn) {
 						jn = !filewritedialog(dir, out, sc);
