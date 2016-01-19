@@ -1,0 +1,2457 @@
+
+
+INVOKE: dlabpro C:\Users\wawra\workspace\uasr/scripts/dlabpro/FEA.xtp ana info/HMM-trn.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// FEA.xtp
+// Process         : $HOSTNAME/4472
+// dLabPro VID     : dLabPro version 2.5.5 build UNKOWNwin32(ix86,32bit)release PID:4472
+// UASR VID        : ?
+// Configuration   : info/HMM-trn.cfg
+// Database        : bottles
+// Plug-in script  : n/a
+// Experiment      : B_Vorversuch2_C
+
+// PRIMARY FEATURE ANALYSIS
+   - Signal dir    : C:/Users/wawra/workspace/uasr-data/bottles/common/sig (fallback, exists)
+   - Label dir     : C:/Users/wawra/workspace/uasr-data/bottles/common/lab (fallback, NOT FOUND)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/all.flst (default, exists)
+   - Use pitchmarks: no
+   - Use f0        : no
+   - Export signals: no
+   - Write features: yes
+
+   Feature analysis of 600 signal files ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+// FEA.xtp completed (0 errors).
+
+
+INVOKE: dlabpro C:\Users\wawra\workspace\uasr/scripts/dlabpro/HMM.xtp trn info/HMM-trn.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// HMM.xtp
+// Process         : $HOSTNAME/5392
+// dLabPro VID     : dLabPro version 2.5.5 build UNKOWNwin32(ix86,32bit)release PID:5392
+// UASR VID        : ?
+// Configuration   : info/HMM-trn.cfg
+// Includes        : .......... done
+// Database        : bottles
+// Plug-in script  : n/a
+// Experiment      : B_Vorversuch2_C
+
+// HMM TRAINING
+// Evaluation mode : -HMM_assess (automatic)
+
+// Creating feature information object ... done (N=60, 30/30)
+// Creating HMMs .... done (2 models, MSF=24, LSF=36)
+// Feature analysis I
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (fallback, exists)
+
+   Vector standardization statistics
+   Gathering feature statistics (N=60, K=1, I=360)
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Statistics summary
+   - Max. abs. sum : 175802222.96962702
+
+// Feature analysis II
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (fallback, exists)
+
+   PCA statistics 
+   Gathering feature statistics (N=60, K=2, I=360)
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Statistics summary
+   - Max. abs. sum : 2578181.5253643515
+
+   Computing PCA transformation matrix ... done (cond=72.06802977858622)
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/feainfo.object ... ok.
+   Time: 24 s
+
+// Initializing 2 HMMs
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/0_0.hmm ... ok
+   Time: 13 s
+
+// HMM assessment
+   - Model ID      : 0_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_0_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 194 of 240
+   - Correctness    : 80.8 % +4.8 -5.6 ( HMM 0_0 )
+   - Confidence lvl.: 95 %
+   Time: 16 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 0_0
+   - Dst. model ID : 0_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/0_1.hmm ... ok
+   Time: 19 s
+
+// HMM assessment
+   - Model ID      : 0_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_1_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 0_1 )
+   - Confidence lvl.: 95 %
+   Time: 35 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 0_1
+   - Dst. model ID : 0_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/0_2.hmm ... ok
+   Time: 38 s
+
+// HMM assessment
+   - Model ID      : 0_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_2_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 194 of 240
+   - Correctness    : 80.8 % +4.8 -5.6 ( HMM 0_2 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 0_2
+   - Dst. model ID : 0_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/0_3.hmm ... ok
+   Time: 17 s
+
+// HMM assessment
+   - Model ID      : 0_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_3_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-0_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 193 of 240
+   - Correctness    : 80.4 % +4.8 -5.6 ( HMM 0_3 )
+   - Confidence lvl.: 95 %
+   Time: 16 s
+  
+// HMM split
+   - Src. model ID : 0_1
+   - Dst. model ID : 1_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+
+   Reading C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/0_1.hmm ..... ok
+   Splitting all Gaussians of 2 models ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/1_0.hmm ... ok
+   Time: 0 s
+
+// HMM assessment
+   - Model ID      : 1_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_0_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 1_0 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_0
+   - Dst. model ID : 1_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/1_1.hmm ... ok
+   Time: 22 s
+
+// HMM assessment
+   - Model ID      : 1_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_1_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 188 of 240
+   - Correctness    : 78.3 % +5 -5.8 ( HMM 1_1 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_1
+   - Dst. model ID : 1_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/1_2.hmm ... ok
+   Time: 21 s
+
+// HMM assessment
+   - Model ID      : 1_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_2_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 189 of 240
+   - Correctness    : 78.8 % +5 -5.7 ( HMM 1_2 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_2
+   - Dst. model ID : 1_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/1_3.hmm ... ok
+   Time: 22 s
+
+// HMM assessment
+   - Model ID      : 1_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_3_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 190 of 240
+   - Correctness    : 79.2 % +5 -5.7 ( HMM 1_3 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_3
+   - Dst. model ID : 1_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/1_4.hmm ... ok
+   Time: 22 s
+
+// HMM assessment
+   - Model ID      : 1_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_4_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 190 of 240
+   - Correctness    : 79.2 % +5 -5.7 ( HMM 1_4 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_4
+   - Dst. model ID : 1_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/1_5.hmm ... ok
+   Time: 23 s
+
+// HMM assessment
+   - Model ID      : 1_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_5_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-1_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 192 of 240
+   - Correctness    : 80 % +4.9 -5.6 ( HMM 1_5 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM split
+   - Src. model ID : 1_0
+   - Dst. model ID : 2_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+
+   Reading C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/1_0.hmm ..... ok
+   Splitting all Gaussians of 2 models ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_0.hmm ... ok
+   Time: 1 s
+
+// HMM assessment
+   - Model ID      : 2_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_0_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 2_0 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_0
+   - Dst. model ID : 2_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_1.hmm ... ok
+   Time: 32 s
+
+// HMM assessment
+   - Model ID      : 2_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_1_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 190 of 240
+   - Correctness    : 79.2 % +5 -5.7 ( HMM 2_1 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_1
+   - Dst. model ID : 2_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_2.hmm ... ok
+   Time: 30 s
+
+// HMM assessment
+   - Model ID      : 2_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_2_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 191 of 240
+   - Correctness    : 79.6 % +4.9 -5.7 ( HMM 2_2 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_2
+   - Dst. model ID : 2_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_3.hmm ... ok
+   Time: 29 s
+
+// HMM assessment
+   - Model ID      : 2_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_3_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 196 of 240
+   - Correctness    : 81.7 % +4.7 -5.5 ( HMM 2_3 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_3
+   - Dst. model ID : 2_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_4.hmm ... ok
+   Time: 29 s
+
+// HMM assessment
+   - Model ID      : 2_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_4_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 198 of 240
+   - Correctness    : 82.5 % +4.6 -5.4 ( HMM 2_4 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_4
+   - Dst. model ID : 2_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_5.hmm ... ok
+   Time: 29 s
+
+// HMM assessment
+   - Model ID      : 2_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_5_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 198 of 240
+   - Correctness    : 82.5 % +4.6 -5.4 ( HMM 2_5 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_5
+   - Dst. model ID : 2_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_6.hmm ... ok
+   Time: 29 s
+
+// HMM assessment
+   - Model ID      : 2_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_6_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 198 of 240
+   - Correctness    : 82.5 % +4.6 -5.4 ( HMM 2_6 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_6
+   - Dst. model ID : 2_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_7.hmm ... ok
+   Time: 29 s
+
+// HMM assessment
+   - Model ID      : 2_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_7_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-2_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 199 of 240
+   - Correctness    : 82.9 % +4.5 -5.4 ( HMM 2_7 )
+   - Confidence lvl.: 95 %
+   Time: 17 s
+  
+// HMM split
+   - Src. model ID : 2_7
+   - Dst. model ID : 3_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+
+   Reading C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/2_7.hmm ..... ok
+   Splitting all Gaussians of 2 models ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_0.hmm ... ok
+   Time: 1 s
+
+// HMM assessment
+   - Model ID      : 3_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_0_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 199 of 240
+   - Correctness    : 82.9 % +4.5 -5.4 ( HMM 3_0 )
+   - Confidence lvl.: 95 %
+   Time: 19 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_0
+   - Dst. model ID : 3_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_1.hmm ... ok
+   Time: 46 s
+
+// HMM assessment
+   - Model ID      : 3_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_1_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 199 of 240
+   - Correctness    : 82.9 % +4.5 -5.4 ( HMM 3_1 )
+   - Confidence lvl.: 95 %
+   Time: 19 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_1
+   - Dst. model ID : 3_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_2.hmm ... ok
+   Time: 47 s
+
+// HMM assessment
+   - Model ID      : 3_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_2_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 198 of 240
+   - Correctness    : 82.5 % +4.6 -5.4 ( HMM 3_2 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_2
+   - Dst. model ID : 3_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_3.hmm ... ok
+   Time: 47 s
+
+// HMM assessment
+   - Model ID      : 3_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_3_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 3_3 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_3
+   - Dst. model ID : 3_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_4.hmm ... ok
+   Time: 48 s
+
+// HMM assessment
+   - Model ID      : 3_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_4_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 3_4 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_4
+   - Dst. model ID : 3_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_5.hmm ... ok
+   Time: 47 s
+
+// HMM assessment
+   - Model ID      : 3_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_5_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 196 of 240
+   - Correctness    : 81.7 % +4.7 -5.5 ( HMM 3_5 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_5
+   - Dst. model ID : 3_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_6.hmm ... ok
+   Time: 48 s
+
+// HMM assessment
+   - Model ID      : 3_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_6_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 3_6 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_6
+   - Dst. model ID : 3_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_7.hmm ... ok
+   Time: 49 s
+
+// HMM assessment
+   - Model ID      : 3_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_7_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 3_7 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_7
+   - Dst. model ID : 3_8
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_8.hmm ... ok
+   Time: 48 s
+
+// HMM assessment
+   - Model ID      : 3_8
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_8_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_8_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 196 of 240
+   - Correctness    : 81.7 % +4.7 -5.5 ( HMM 3_8 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_8
+   - Dst. model ID : 3_9
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_9.hmm ... ok
+   Time: 49 s
+
+// HMM assessment
+   - Model ID      : 3_9
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_9_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-3_9_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 3_9 )
+   - Confidence lvl.: 95 %
+   Time: 18 s
+  
+// HMM split
+   - Src. model ID : 3_0
+   - Dst. model ID : 4_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+
+   Reading C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/3_0.hmm ..... ok
+   Splitting all Gaussians of 2 models ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_0.hmm ... ok
+   Time: 2 s
+
+// HMM assessment
+   - Model ID      : 4_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_0_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 199 of 240
+   - Correctness    : 82.9 % +4.5 -5.4 ( HMM 4_0 )
+   - Confidence lvl.: 95 %
+   Time: 21 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_0
+   - Dst. model ID : 4_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_1.hmm ... ok
+   Time: 81 s
+
+// HMM assessment
+   - Model ID      : 4_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_1_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 201 of 240
+   - Correctness    : 83.8 % +4.4 -5.3 ( HMM 4_1 )
+   - Confidence lvl.: 95 %
+   Time: 20 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_1
+   - Dst. model ID : 4_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_2.hmm ... ok
+   Time: 81 s
+
+// HMM assessment
+   - Model ID      : 4_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_2_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 190 of 240
+   - Correctness    : 79.2 % +5 -5.7 ( HMM 4_2 )
+   - Confidence lvl.: 95 %
+   Time: 20 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_2
+   - Dst. model ID : 4_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_3.hmm ... ok
+   Time: 82 s
+
+// HMM assessment
+   - Model ID      : 4_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_3_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 192 of 240
+   - Correctness    : 80 % +4.9 -5.6 ( HMM 4_3 )
+   - Confidence lvl.: 95 %
+   Time: 21 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_3
+   - Dst. model ID : 4_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_4.hmm ... ok
+   Time: 82 s
+
+// HMM assessment
+   - Model ID      : 4_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_4_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 190 of 240
+   - Correctness    : 79.2 % +5 -5.7 ( HMM 4_4 )
+   - Confidence lvl.: 95 %
+   Time: 20 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_4
+   - Dst. model ID : 4_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_5.hmm ... ok
+   Time: 83 s
+
+// HMM assessment
+   - Model ID      : 4_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_5_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 193 of 240
+   - Correctness    : 80.4 % +4.8 -5.6 ( HMM 4_5 )
+   - Confidence lvl.: 95 %
+   Time: 21 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_5
+   - Dst. model ID : 4_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_6.hmm ... ok
+   Time: 83 s
+
+// HMM assessment
+   - Model ID      : 4_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_6_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 194 of 240
+   - Correctness    : 80.8 % +4.8 -5.6 ( HMM 4_6 )
+   - Confidence lvl.: 95 %
+   Time: 21 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_6
+   - Dst. model ID : 4_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_7.hmm ... ok
+   Time: 83 s
+
+// HMM assessment
+   - Model ID      : 4_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_7_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 194 of 240
+   - Correctness    : 80.8 % +4.8 -5.6 ( HMM 4_7 )
+   - Confidence lvl.: 95 %
+   Time: 21 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_7
+   - Dst. model ID : 4_8
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_8.hmm ... ok
+   Time: 83 s
+
+// HMM assessment
+   - Model ID      : 4_8
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_8_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_8_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 4_8 )
+   - Confidence lvl.: 95 %
+   Time: 21 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_8
+   - Dst. model ID : 4_9
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_9.hmm ... ok
+   Time: 82 s
+
+// HMM assessment
+   - Model ID      : 4_9
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_9_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_9_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 4_9 )
+   - Confidence lvl.: 95 %
+   Time: 20 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_9
+   - Dst. model ID : 4_10
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_10.hmm ... ok
+   Time: 81 s
+
+// HMM assessment
+   - Model ID      : 4_10
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_10_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_10_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 4_10 )
+   - Confidence lvl.: 95 %
+   Time: 20 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_10
+   - Dst. model ID : 4_11
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_11.hmm ... ok
+   Time: 81 s
+
+// HMM assessment
+   - Model ID      : 4_11
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_11_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-4_11_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 195 of 240
+   - Correctness    : 81.3 % +4.7 -5.5 ( HMM 4_11 )
+   - Confidence lvl.: 95 %
+   Time: 20 s
+  
+// HMM split
+   - Src. model ID : 4_1
+   - Dst. model ID : 5_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+
+   Reading C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_1.hmm ..... ok
+   Splitting all Gaussians of 2 models ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_0.hmm ... ok
+   Time: 4 s
+
+// HMM assessment
+   - Model ID      : 5_0
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_0_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 200 of 240
+   - Correctness    : 83.3 % +4.5 -5.3 ( HMM 5_0 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_0
+   - Dst. model ID : 5_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_1.hmm ... ok
+   Time: 150 s
+
+// HMM assessment
+   - Model ID      : 5_1
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_1_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 196 of 240
+   - Correctness    : 81.7 % +4.7 -5.5 ( HMM 5_1 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_1
+   - Dst. model ID : 5_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_2.hmm ... ok
+   Time: 152 s
+
+// HMM assessment
+   - Model ID      : 5_2
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_2_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 193 of 240
+   - Correctness    : 80.4 % +4.8 -5.6 ( HMM 5_2 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_2
+   - Dst. model ID : 5_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_3.hmm ... ok
+   Time: 154 s
+
+// HMM assessment
+   - Model ID      : 5_3
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_3_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 185 of 240
+   - Correctness    : 77.1 % +5.2 -5.8 ( HMM 5_3 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_3
+   - Dst. model ID : 5_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_4.hmm ... ok
+   Time: 152 s
+
+// HMM assessment
+   - Model ID      : 5_4
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_4_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 183 of 240
+   - Correctness    : 76.3 % +5.2 -5.9 ( HMM 5_4 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_4
+   - Dst. model ID : 5_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_5.hmm ... ok
+   Time: 153 s
+
+// HMM assessment
+   - Model ID      : 5_5
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_5_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 186 of 240
+   - Correctness    : 77.5 % +5.1 -5.8 ( HMM 5_5 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_5
+   - Dst. model ID : 5_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_6.hmm ... ok
+   Time: 152 s
+
+// HMM assessment
+   - Model ID      : 5_6
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_6_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 185 of 240
+   - Correctness    : 77.1 % +5.2 -5.8 ( HMM 5_6 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_6
+   - Dst. model ID : 5_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_7.hmm ... ok
+   Time: 149 s
+
+// HMM assessment
+   - Model ID      : 5_7
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_7_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 189 of 240
+   - Correctness    : 78.8 % +5 -5.7 ( HMM 5_7 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_7
+   - Dst. model ID : 5_8
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_8.hmm ... ok
+   Time: 151 s
+
+// HMM assessment
+   - Model ID      : 5_8
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_8_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_8_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 192 of 240
+   - Correctness    : 80 % +4.9 -5.6 ( HMM 5_8 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_8
+   - Dst. model ID : 5_9
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_9.hmm ... ok
+   Time: 150 s
+
+// HMM assessment
+   - Model ID      : 5_9
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_9_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_9_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 190 of 240
+   - Correctness    : 79.2 % +5 -5.7 ( HMM 5_9 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_9
+   - Dst. model ID : 5_10
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_10.hmm ... ok
+   Time: 149 s
+
+// HMM assessment
+   - Model ID      : 5_10
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_10_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_10_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 188 of 240
+   - Correctness    : 78.3 % +5 -5.8 ( HMM 5_10 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_10
+   - Dst. model ID : 5_11
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_11.hmm ... ok
+   Time: 149 s
+
+// HMM assessment
+   - Model ID      : 5_11
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_11_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_11_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 188 of 240
+   - Correctness    : 78.3 % +5 -5.8 ( HMM 5_11 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_11
+   - Dst. model ID : 5_12
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_12.hmm ... ok
+   Time: 149 s
+
+// HMM assessment
+   - Model ID      : 5_12
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_12_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_12_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 188 of 240
+   - Correctness    : 78.3 % +5 -5.8 ( HMM 5_12 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_12
+   - Dst. model ID : 5_13
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/train.flst (default, exists)
+
+   Updating 2 models with 360 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/5_13.hmm ... ok
+   Time: 150 s
+
+// HMM assessment
+   - Model ID      : 5_13
+   - Model dir     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model (default, exists)
+   - Feature dir   : C:/Users/wawra/workspace/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log (default, exists)
+   - File list     : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/flists/test.flst (default, exists)
+
+   Assessing 240 samples by 2 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_13_assess.dn3 ... ok
+   Writing C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/log/hmm-5_13_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 188 of 240
+   - Correctness    : 78.3 % +5 -5.8 ( HMM 5_13 )
+   - Confidence lvl.: 95 %
+   Time: 26 s
+  
+
+// HMM.xtp completed (0 errors).
+   - Writing info file C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/../info.txt ... done
+   - Evaluation results ok
+
+
+   Analyzing 6 HMM assessment logs ...
+   - HMM 0_1: 81.3 % correct
+   - HMM 1_0: 81.6 % correct
+   - HMM 2_7: 83.3 % correct
+   - HMM 3_0: 83.3 % correct
+   - HMM 4_1: 84.1 % correct
+   - HMM 5_0: 83.7 % correct
+   Best model: 4_1
+
+ Confusion matrix:
+ data idAux
+------------------------------------------------------------------------------------------------------------------------
+          0   1 
+        ... ... 
+ 0   D:  88   7 
+ 1   V:  32 113 
+ 2 REF:   D   V 
+------------------------------------------------------------------------------------------------------------------------
+
+
+   Generating info/REC_PACKDATA.cfg ... done.
+   Generating info/recognizer.cfg ... done.
+
+INVOKE: dlabpro C:\Users\wawra\workspace\uasr/scripts/dlabpro/tools/REC_PACKDATA.xtp rec info/REC_PACKDATA.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// REC_PACKDATA.xtp
+// Process         : $HOSTNAME/6276
+// dLabPro VID     : dLabPro version 2.5.5 build UNKOWNwin32(ix86,32bit)release PID:6276
+// UASR VID        : ?
+// Configuration   : info/REC_PACKDATA.cfg
+
+// RECOGNIZER DATA PACKAGING: RECOGNITION (SIMPLE GRAMMAR)
+   - Feature info  : C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/feainfo.object (exists)
+   - Acoustic model: C:/Users/wawra/workspace/uasr-data/bottles/B_Vorversuch2_C/model/4_1.hmm (exists)
+   - Grammar       : C:\Users\wawra\workspace\uasr-data/bottles/B_Vorversuch2_C/info/recognizer.grm.txt (exists)
+   - Output folder : C:\Users\wawra\workspace\uasr-data/bottles/B_Vorversuch2_C/model
+   - SVG rendering : yes
+   - openFST export: no
+
+   Packing feature info file ... ok
+   Packing Gaussian mixture model file .... ok
+   Packing session info file ....
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '1' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '2' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '5' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '1' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '2' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '5' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '1' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol 'C' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '2' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found.
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(298): error fst1014: Symbol '0' not found...
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lm.itp(400): error - No rule to expand non-terminal "<PAU>"
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lm.itp(400): error - No rule to expand non-terminal "<PAU>"
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(406): warning fst1008: Unit 0 is empty
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/util/lx.itp(406): warning fst1008: Unit 0 is empty
+C:/Users/wawra/workspace/uasr/scripts/dlabpro/tools/REC_PACKDATA.xtp(330): warning fst1008: Unit 0 is empty... ok
+
+// REC_PACKDATA.xtp completed (2 errors).
+
+
+
+   Creating flists/test_wav.flst ... done.
+
+   Testing recognizer ...
+
+INVOKE: recognizer -cfg info/recognizer.cfg flists/test_wav.flst
+
+dlpo_xml.c(214): warning root10016: Deserialization of field 'nDim' failed.
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: D res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+cmd: lab: V res: () cor: 0 acc: 0
+
+file_data.c(494): error root10013: Cannot find file 'C:/Users/wawra/workspace/uasr-data/bottles/common/sig/.wav' or access it for reading.(file_data.c:494)
+cmd: N:   240
+cmd: TP:  0
+cmd: TP:  0
+cmd: FP:  0
+cmd: TN:  240
+cmd: FN:  0
+cmd: TO:  0
+cmd: FO:  0
+cmd: WRR: 0.000%
+cmd: ACC: 100.000%
+cmd: FAR: 0.000%
+cmd: FRR: 0.000%
