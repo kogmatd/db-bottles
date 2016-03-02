@@ -27,7 +27,7 @@ public class Fileoperations {
 	 * > Alt 62
 	 * < Alt 60
 	 */
-	public static String allWavpath(File dir, Integer mic) {	
+	public static String allWavpath(File dir, Integer mic, Integer modus) {	
 		String out = new String();
 		String path = new String();
 		String name = new String();
@@ -41,7 +41,20 @@ public class Fileoperations {
 					if (path.endsWith(".wav")) { //WAV-Datei gefunden
 						try {
 							path = path.substring((path.indexOf("sig")+3), (path.length()-4));
-							name = path.substring((path.lastIndexOf("\\")+1),(path.lastIndexOf("_")));				
+							switch (modus) {
+							case 1:  {
+								name = path.substring((path.lastIndexOf("\\")+1),(path.lastIndexOf("\\")+2));
+								System.out.print(".");
+							}
+								break;
+							case 2:
+								name = path.substring((path.lastIndexOf("\\")+1),(path.lastIndexOf("\\")+5));
+								System.out.print("-");
+								break;
+							default: 
+								System.out.print("_");
+								name = path.substring((path.lastIndexOf("\\")+1),(path.lastIndexOf("_")));				
+							}
 						} catch (StringIndexOutOfBoundsException e) {	
 							//Dateinamen mit falschem Schema werden ignoriert
 						}
@@ -73,10 +86,10 @@ public class Fileoperations {
 					if (mic == -1) {
 						if (files[i].getName().startsWith("V") || files[i].getName().startsWith("D")
 								|| files[i].getName().startsWith("B"))
-							out += allWavpath(files[i], mic);
+							out += allWavpath(files[i], mic, modus);
 					} else {
 						if (files[i].getName().startsWith("E")) {
-							out += allWavpath(files[i], mic);
+							out += allWavpath(files[i], mic, modus);
 						}
 					}
 				}
@@ -331,8 +344,26 @@ public static String transform(File logfile) {
 		System.out.println("Datei " + directory.toString() + " ausgewaehlt.");
 		return directory;
 	}
+
+	/*
+	 * wählt Modus für Klassenfestlegung
+	 */
 	
-	
+	public static Integer setModus(Scanner sc){
+		while (true) {
+		System.out.println("Bitte wählen Sie den Modus der Klassen: \n"
+				+ "(0) alles vor \"_\" im Dateinamen\n"
+				+ "(1) Broken/Destroyed/Valid\n"
+				+ "(2) Einzelne Flaschen");
+		String eingabe = sc.next();
+			switch (eingabe){
+			case "1": return 1;
+			case "2": return 2;
+			case "0": return 0;
+			default:  System.out.println("Falsche Eingabe. Bitte eine Zahl zwischen 0 und 2 eingeben.");
+			}
+		}
+	}
 	
 	
 	/*
@@ -359,7 +390,8 @@ public static String transform(File logfile) {
 					if (directory == null) {
 						System.out.println("Filelisten erstellen abgebrochen.");
 					} else {
-						String wavfilepaths = allWavpath(directory, mic); //hier die eigentliche Verarbeitung
+						Integer modus = setModus(sc);
+						String wavfilepaths = allWavpath(directory, mic, modus); //hier die eigentliche Verarbeitung
 						System.out.println(wavfilepaths);
 						dir = new File (uasr + "-data\\bottles\\common\\flists\\tmp");
 						boolean jn = false;
