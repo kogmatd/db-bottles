@@ -82,7 +82,7 @@ public class Fileoperations {
 				}
 			}
 		}
-		out = out.replaceAll("\\","/");
+		out = out.replace("\\","/");
 		return out;
 	}
 	
