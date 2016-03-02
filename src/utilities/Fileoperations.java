@@ -82,6 +82,7 @@ public class Fileoperations {
 				}
 			}
 		}
+		out = out.replaceAll("\\","/");
 		return out;
 	}
 	
@@ -307,8 +308,7 @@ public static String transform(File logfile) {
 
     return (out);
 }
-	
-	
+
 	/*
 	 * Wählt eine Datei aus, erneute Abfrage bei Verzeichnissen
 	 * 
@@ -380,7 +380,7 @@ public static String transform(File logfile) {
 					File dir = new File (uasr + "-data\\bottles\\");
 					System.out.print("Logdatei-");
 					File logfile = filechoose(dir, sc);
-			        String out = transform (logfile); //hier die eigentliche Verarbeitung
+			        String out = transform(logfile); //hier die eigentliche Verarbeitung
 					boolean jn = true;
 					while (jn) {
 						jn = !filewritedialog(dir, out, sc);
