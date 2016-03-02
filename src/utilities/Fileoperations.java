@@ -338,7 +338,7 @@ public static String transform(File logfile) {
 	/*
 	 * Hauptprogramm
 	 */
-	public static void main(String [ ] args) {
+	public static void main(String [] args) {
 		boolean abbruch = false;
 		Scanner sc = new Scanner(System.in);
 		while (!abbruch) {			
