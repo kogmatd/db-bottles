@@ -2,17 +2,17 @@ HMM Training
 ============
 
 Config.: trn
-Date   : 2015-11-20
-dLabPro: dLabPro version 2.5.5 build UNKOWNwin32(ix86,32bit)release PID:2560
-UASR   : ?
+Date   : 2016-05-10
+dLabPro: dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:29638
+UASR   : 8BC835B8A5
 DB     : ?
-Host   : $HOSTNAME
+Host   : newisland.kt.tu-cottbus.de
 
 Configuration Details
 =====================
 
 uasr.db =  "bottles";
-uasr.exp =  "B_Vorversuch2";
+uasr.exp =  "B_Vorversuch002_A";
 uasr.sig.srate =  48000;
 uasr.pfa.crate =  160;
 uasr.pfa.wlen =  400;
