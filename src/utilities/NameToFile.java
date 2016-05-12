@@ -80,7 +80,7 @@ public class NameToFile {
 						if (path.endsWith(".wav")) { //WAV-Datei gefunden
 							try {
 								start = path.substring(0,(path.lastIndexOf("\\")+10));
-								end = path.substring(path.lastIndexOf(".wav")-4,path.length());
+								end = path.substring(path.indexOf(".")-4,path.length());
 							//	System.out.println(start + end);
 								newPath = new File(start + end);
 								success = files[i].renameTo(newPath);
