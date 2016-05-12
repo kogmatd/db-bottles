@@ -375,7 +375,9 @@ public static String transform(File logfile) {
 		while (!abbruch) {			
 			System.out.println("Wollen Sie \n"
 					+ "(1) Filelisten generieren, \n"
-					+ "(2) Ergebnisse aus der Logdatei extrahieren oder \n"
+					+ "(2) Ergebnisse aus der Logdatei extrahieren, \n"
+					+ "(3) Hammersignale in txt datei schreiben, \n"
+					+ "(4) Hammerangabe aus Datei entfernen oder \n"
 					+ "(e) das Programm beenden?");
 			String eingabe = new String();
 			eingabe = sc.next();
@@ -386,7 +388,7 @@ public static String transform(File logfile) {
 					Integer mic = micselect(sc);
 					String uasr = System.getenv("UASR_HOME");
 					File dir = new File (uasr + "-data\\bottles\\common\\sig\\");
-					File directory = userdialog(dir, true, sc);
+					File directory = userdialog(dir, false, sc);
 					if (directory == null) {
 						System.out.println("Filelisten erstellen abgebrochen.");
 					} else {
@@ -429,6 +431,28 @@ public static String transform(File logfile) {
 				    
 				}
 				break;
+				
+			case "3":
+			{ // AUSWERTUNG LOGDATEI
+		        String uasr = System.getenv("UASR_HOME");
+				File dir = new File (uasr + "-data\\bottles\\common\\sig_hammer");
+				System.out.print("Hammersignal-");
+				File hammerfile = userdialog(dir, true, sc);
+		        String out = NameToFile.NameToMetaFile(hammerfile); //hier die eigentliche Verarbeitung
+				System.out.println(out);
+		  	}
+			break;
+			
+			case "4":
+			{ // AUSWERTUNG LOGDATEI
+		        String uasr = System.getenv("UASR_HOME");
+				File dir = new File (uasr + "-data\\bottles\\common");
+				System.out.print("Signal-");
+				File file = userdialog(dir, true, sc);
+		        String out = NameToFile.renameIt(file); //hier die eigentliche Verarbeitung
+				System.out.println(out);
+		  	}
+			break;
 			
 			case "e":
 				abbruch = true;	
