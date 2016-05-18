@@ -1,0 +1,2489 @@
+
+
+INVOKE: dlabpro /data/samba/komtech/public/uasr/scripts/dlabpro/FEA.xtp ana info/HMM-trn.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// FEA.xtp
+// Process         : newisland.kt.tu-cottbus.de/3719
+// dLabPro VID     : dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:3719
+// UASR VID        : 8BC835B8A5
+// Configuration   : info/HMM-trn.cfg
+// Database        : bottles
+// Plug-in script  : n/a
+// Experiment      : B_Vorversuch002_B
+
+// PRIMARY FEATURE ANALYSIS
+   - Signal dir    : /data/samba/komtech/public/uasr-data/bottles/common/sig (fallback, exists)
+   - Label dir     : /data/samba/komtech/public/uasr-data/bottles/common/lab (fallback, NOT FOUND)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/all.flst (default, exists)
+   - Use pitchmarks: no
+   - Use f0        : no
+   - Export signals: no
+   - Write features: yes
+
+   Feature analysis of 600 signal files ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             ||||||||||||||||||||||||||||||||||||||||
+---Interrupt requested. Press again to quit.---
+
+at /data/samba/komtech/public/uasr/scripts/dlabpro/util/sig.itp(186)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/util/sig.itp(91)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/util/fea.itp(348)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/FEA.xtp(189)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/FEA.xtp(397)
+dLabPro.-SIG_import> 
+
+INVOKE: dlabpro /data/samba/komtech/public/uasr/scripts/dlabpro/HMM.xtp trn info/HMM-trn.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// HMM.xtp
+// Process         : newisland.kt.tu-cottbus.de/3824
+// dLabPro VID     : dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:3824
+// UASR VID        : 8BC835B8A5
+// Includes        : .......... done
+// Configuration   : info/HMM-trn.cfg
+// Database        : bottles
+// Plug-in script  : n/a
+// Experiment      : B_Vorversuch002_B
+
+// HMM TRAINING
+// Evaluation mode : -HMM_assess (automatic)
+
+// Creating feature information object ... done (N=60, 30/30)
+// Creating HMMs .... done (20 models, MSF=24, LSF=36)
+// Feature analysis I
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (fallback, exists)
+
+   Vector standardization statistics
+   Gathering feature statistics (N=60, K=1, I=400)
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             ||||||||||||||
+---Interrupt requested. Press again to quit.---
+
+at /data/samba/komtech/public/uasr/scripts/dlabpro/util/fea.itp(970)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/util/fea.itp(1204)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/train/am.itp(177)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/HMM.xtp(1023)
+at /data/samba/komtech/public/uasr/scripts/dlabpro/HMM.xtp(1210)
+dLabPro.-FEA_sfa> 
+
+   Analyzing 0 HMM assessment logs ...
+   Best model: 0_0
+
+ Confusion matrix:
+ data idAux
+------------------------------------------------------------------------------------------------------------------------
+   [no data]
+------------------------------------------------------------------------------------------------------------------------
+
+
+   Generating info/REC_PACKDATA.cfg ... done.
+   Generating info/recognizer.cfg ... done.
+
+INVOKE: dlabpro /data/samba/komtech/public/uasr/scripts/dlabpro/tools/REC_PACKDATA.xtp rec info/REC_PACKDATA.cfg
+
+
+   Creating flists/test_wav.flst ... done.
+
+   Testing recognizer ...
+
+INVOKE: recognizer -cfg info/recognizer.cfg flists/test_wav.flst
+
+
+INVOKE: dlabpro /data/samba/komtech/public/uasr/scripts/dlabpro/FEA.xtp ana info/HMM-trn.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// FEA.xtp
+// Process         : newisland.kt.tu-cottbus.de/3993
+// dLabPro VID     : dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:3993
+// UASR VID        : 8BC835B8A5
+// Configuration   : info/HMM-trn.cfg
+// Database        : bottles
+// Plug-in script  : n/a
+// Experiment      : B_Vorversuch002_B
+
+// PRIMARY FEATURE ANALYSIS
+   - Signal dir    : /data/samba/komtech/public/uasr-data/bottles/common/sig (fallback, exists)
+   - Label dir     : /data/samba/komtech/public/uasr-data/bottles/common/lab (fallback, NOT FOUND)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/all.flst (default, exists)
+   - Use pitchmarks: no
+   - Use f0        : no
+   - Export signals: no
+   - Write features: yes
+
+   Feature analysis of 600 signal files ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+// FEA.xtp completed (0 errors).
+
+
+INVOKE: dlabpro /data/samba/komtech/public/uasr/scripts/dlabpro/HMM.xtp trn info/HMM-trn.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// HMM.xtp
+// Process         : newisland.kt.tu-cottbus.de/4132
+// dLabPro VID     : dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:4132
+// UASR VID        : 8BC835B8A5
+// Includes        : .......... done
+// Configuration   : info/HMM-trn.cfg
+// Database        : bottles
+// Plug-in script  : n/a
+// Experiment      : B_Vorversuch002_B
+
+// HMM TRAINING
+// Evaluation mode : -HMM_assess (automatic)
+
+// Creating feature information object ... done (N=60, 30/30)
+// Creating HMMs .... done (20 models, MSF=24, LSF=36)
+// Feature analysis I
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (fallback, exists)
+
+   Vector standardization statistics
+   Gathering feature statistics (N=60, K=1, I=400)
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Statistics summary
+   - Max. abs. sum : 194356259.4412505
+
+// Feature analysis II
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (fallback, exists)
+
+   PCA statistics 
+   Gathering feature statistics (N=60, K=20, I=400)
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Statistics summary
+   - Max. abs. sum : 657224.6931946303
+
+   Computing PCA transformation matrix ... done (cond=72.36248815874778)
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/feainfo.object ... ok.
+   Time: 24 s
+
+// Initializing 20 HMMs
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/0_0.hmm ... ok
+   Time: 14 s
+
+// HMM assessment
+   - Model ID      : 0_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_0_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 122 of 200
+   - Correctness    : 61 % +6.8 -7.1 ( HMM 0_0 )
+   - Confidence lvl.: 95 %
+   Time: 92 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 0_0
+   - Dst. model ID : 0_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/0_1.hmm ... ok
+   Time: 23 s
+
+// HMM assessment
+   - Model ID      : 0_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_1_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 129 of 200
+   - Correctness    : 64.5 % +6.6 -7.1 ( HMM 0_1 )
+   - Confidence lvl.: 95 %
+   Time: 93 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 0_1
+   - Dst. model ID : 0_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/0_2.hmm ... ok
+   Time: 24 s
+
+// HMM assessment
+   - Model ID      : 0_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_2_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 131 of 200
+   - Correctness    : 65.5 % +6.6 -7 ( HMM 0_2 )
+   - Confidence lvl.: 95 %
+   Time: 87 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 0_2
+   - Dst. model ID : 0_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/0_3.hmm ... ok
+   Time: 24 s
+
+// HMM assessment
+   - Model ID      : 0_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_3_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-0_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 132 of 200
+   - Correctness    : 66 % +6.5 -7 ( HMM 0_3 )
+   - Confidence lvl.: 95 %
+   Time: 102 s
+  
+// HMM split
+   - Src. model ID : 0_3
+   - Dst. model ID : 1_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+
+   Reading /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/0_3.hmm ..... ok
+   Splitting all Gaussians of 20 models ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/1_0.hmm ... ok
+   Time: 0 s
+
+// HMM assessment
+   - Model ID      : 1_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_0_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 133 of 200
+   - Correctness    : 66.5 % +6.5 -7 ( HMM 1_0 )
+   - Confidence lvl.: 95 %
+   Time: 100 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_0
+   - Dst. model ID : 1_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/1_1.hmm ... ok
+   Time: 35 s
+
+// HMM assessment
+   - Model ID      : 1_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_1_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 135 of 200
+   - Correctness    : 67.5 % +6.4 -7 ( HMM 1_1 )
+   - Confidence lvl.: 95 %
+   Time: 134 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_1
+   - Dst. model ID : 1_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/1_2.hmm ... ok
+   Time: 34 s
+
+// HMM assessment
+   - Model ID      : 1_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_2_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 133 of 200
+   - Correctness    : 66.5 % +6.5 -7 ( HMM 1_2 )
+   - Confidence lvl.: 95 %
+   Time: 125 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_2
+   - Dst. model ID : 1_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/1_3.hmm ... ok
+   Time: 34 s
+
+// HMM assessment
+   - Model ID      : 1_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_3_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 130 of 200
+   - Correctness    : 65 % +6.6 -7 ( HMM 1_3 )
+   - Confidence lvl.: 95 %
+   Time: 104 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_3
+   - Dst. model ID : 1_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/1_4.hmm ... ok
+   Time: 33 s
+
+// HMM assessment
+   - Model ID      : 1_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_4_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 128 of 200
+   - Correctness    : 64 % +6.6 -7.1 ( HMM 1_4 )
+   - Confidence lvl.: 95 %
+   Time: 110 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 1_4
+   - Dst. model ID : 1_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/1_5.hmm ... ok
+   Time: 34 s
+
+// HMM assessment
+   - Model ID      : 1_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_5_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-1_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 132 of 200
+   - Correctness    : 66 % +6.5 -7 ( HMM 1_5 )
+   - Confidence lvl.: 95 %
+   Time: 128 s
+  
+// HMM split
+   - Src. model ID : 1_1
+   - Dst. model ID : 2_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+
+   Reading /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/1_1.hmm ..... ok
+   Splitting all Gaussians of 20 models ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_0.hmm ... ok
+   Time: 1 s
+
+// HMM assessment
+   - Model ID      : 2_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_0_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 133 of 200
+   - Correctness    : 66.5 % +6.5 -7 ( HMM 2_0 )
+   - Confidence lvl.: 95 %
+   Time: 113 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_0
+   - Dst. model ID : 2_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_1.hmm ... ok
+   Time: 54 s
+
+// HMM assessment
+   - Model ID      : 2_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_1_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 134 of 200
+   - Correctness    : 67 % +6.5 -7 ( HMM 2_1 )
+   - Confidence lvl.: 95 %
+   Time: 110 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_1
+   - Dst. model ID : 2_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_2.hmm ... ok
+   Time: 50 s
+
+// HMM assessment
+   - Model ID      : 2_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_2_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 111 of 200
+   - Correctness    : 55.5 % +7 -7.2 ( HMM 2_2 )
+   - Confidence lvl.: 95 %
+   Time: 112 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_2
+   - Dst. model ID : 2_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_3.hmm ... ok
+   Time: 50 s
+
+// HMM assessment
+   - Model ID      : 2_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_3_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 111 of 200
+   - Correctness    : 55.5 % +7 -7.2 ( HMM 2_3 )
+   - Confidence lvl.: 95 %
+   Time: 110 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_3
+   - Dst. model ID : 2_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_4.hmm ... ok
+   Time: 54 s
+
+// HMM assessment
+   - Model ID      : 2_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_4_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 116 of 200
+   - Correctness    : 58 % +6.9 -7.2 ( HMM 2_4 )
+   - Confidence lvl.: 95 %
+   Time: 123 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_4
+   - Dst. model ID : 2_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_5.hmm ... ok
+   Time: 53 s
+
+// HMM assessment
+   - Model ID      : 2_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_5_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 111 of 200
+   - Correctness    : 55.5 % +7 -7.2 ( HMM 2_5 )
+   - Confidence lvl.: 95 %
+   Time: 105 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_5
+   - Dst. model ID : 2_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_6.hmm ... ok
+   Time: 54 s
+
+// HMM assessment
+   - Model ID      : 2_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_6_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 110 of 200
+   - Correctness    : 55 % +7 -7.2 ( HMM 2_6 )
+   - Confidence lvl.: 95 %
+   Time: 129 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 2_6
+   - Dst. model ID : 2_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_7.hmm ... ok
+   Time: 52 s
+
+// HMM assessment
+   - Model ID      : 2_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_7_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-2_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 114 of 200
+   - Correctness    : 57 % +7 -7.2 ( HMM 2_7 )
+   - Confidence lvl.: 95 %
+   Time: 99 s
+  
+// HMM split
+   - Src. model ID : 2_1
+   - Dst. model ID : 3_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+
+   Reading /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/2_1.hmm ..... ok
+   Splitting all Gaussians of 20 models ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_0.hmm ... ok
+   Time: 2 s
+
+// HMM assessment
+   - Model ID      : 3_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_0_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 135 of 200
+   - Correctness    : 67.5 % +6.4 -7 ( HMM 3_0 )
+   - Confidence lvl.: 95 %
+   Time: 148 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_0
+   - Dst. model ID : 3_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_1.hmm ... ok
+   Time: 86 s
+
+// HMM assessment
+   - Model ID      : 3_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_1_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 112 of 200
+   - Correctness    : 56 % +7 -7.2 ( HMM 3_1 )
+   - Confidence lvl.: 95 %
+   Time: 147 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_1
+   - Dst. model ID : 3_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_2.hmm ... ok
+   Time: 86 s
+
+// HMM assessment
+   - Model ID      : 3_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_2_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 42 of 200
+   - Correctness    : 21 % +6.3 -5.4 ( HMM 3_2 )
+   - Confidence lvl.: 95 %
+   Time: 143 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_2
+   - Dst. model ID : 3_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_3.hmm ... ok
+   Time: 84 s
+
+// HMM assessment
+   - Model ID      : 3_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_3_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 85 of 200
+   - Correctness    : 42.5 % +7.2 -6.9 ( HMM 3_3 )
+   - Confidence lvl.: 95 %
+   Time: 145 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_3
+   - Dst. model ID : 3_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_4.hmm ... ok
+   Time: 80 s
+
+// HMM assessment
+   - Model ID      : 3_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_4_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 85 of 200
+   - Correctness    : 42.5 % +7.2 -6.9 ( HMM 3_4 )
+   - Confidence lvl.: 95 %
+   Time: 106 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_4
+   - Dst. model ID : 3_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_5.hmm ... ok
+   Time: 80 s
+
+// HMM assessment
+   - Model ID      : 3_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_5_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 89 of 200
+   - Correctness    : 44.5 % +7.2 -7 ( HMM 3_5 )
+   - Confidence lvl.: 95 %
+   Time: 126 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_5
+   - Dst. model ID : 3_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_6.hmm ... ok
+   Time: 79 s
+
+// HMM assessment
+   - Model ID      : 3_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_6_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 93 of 200
+   - Correctness    : 46.5 % +7.2 -7.1 ( HMM 3_6 )
+   - Confidence lvl.: 95 %
+   Time: 138 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_6
+   - Dst. model ID : 3_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_7.hmm ... ok
+   Time: 76 s
+
+// HMM assessment
+   - Model ID      : 3_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_7_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 92 of 200
+   - Correctness    : 46 % +7.2 -7.1 ( HMM 3_7 )
+   - Confidence lvl.: 95 %
+   Time: 135 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_7
+   - Dst. model ID : 3_8
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_8.hmm ... ok
+   Time: 76 s
+
+// HMM assessment
+   - Model ID      : 3_8
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_8_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_8_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 87 of 200
+   - Correctness    : 43.5 % +7.2 -7 ( HMM 3_8 )
+   - Confidence lvl.: 95 %
+   Time: 131 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 3_8
+   - Dst. model ID : 3_9
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_9.hmm ... ok
+   Time: 75 s
+
+// HMM assessment
+   - Model ID      : 3_9
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_9_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-3_9_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 86 of 200
+   - Correctness    : 43 % +7.2 -7 ( HMM 3_9 )
+   - Confidence lvl.: 95 %
+   Time: 114 s
+  
+// HMM split
+   - Src. model ID : 3_0
+   - Dst. model ID : 4_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+
+   Reading /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_0.hmm ..... ok
+   Splitting all Gaussians of 20 models ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_0.hmm ... ok
+   Time: 3 s
+
+// HMM assessment
+   - Model ID      : 4_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_0_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 134 of 200
+   - Correctness    : 67 % +6.5 -7 ( HMM 4_0 )
+   - Confidence lvl.: 95 %
+   Time: 167 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_0
+   - Dst. model ID : 4_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_1.hmm ... ok
+   Time: 151 s
+
+// HMM assessment
+   - Model ID      : 4_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_1_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 113 of 200
+   - Correctness    : 56.5 % +7 -7.2 ( HMM 4_1 )
+   - Confidence lvl.: 95 %
+   Time: 142 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_1
+   - Dst. model ID : 4_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_2.hmm ... ok
+   Time: 154 s
+
+// HMM assessment
+   - Model ID      : 4_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_2_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 74 of 200
+   - Correctness    : 37 % +7.1 -6.7 ( HMM 4_2 )
+   - Confidence lvl.: 95 %
+   Time: 134 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_2
+   - Dst. model ID : 4_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_3.hmm ... ok
+   Time: 142 s
+
+// HMM assessment
+   - Model ID      : 4_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_3_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 80 of 200
+   - Correctness    : 40 % +7.1 -6.8 ( HMM 4_3 )
+   - Confidence lvl.: 95 %
+   Time: 142 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_3
+   - Dst. model ID : 4_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_4.hmm ... ok
+   Time: 138 s
+
+// HMM assessment
+   - Model ID      : 4_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_4_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 88 of 200
+   - Correctness    : 44 % +7.2 -7 ( HMM 4_4 )
+   - Confidence lvl.: 95 %
+   Time: 162 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_4
+   - Dst. model ID : 4_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_5.hmm ... ok
+   Time: 132 s
+
+// HMM assessment
+   - Model ID      : 4_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_5_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 73 of 200
+   - Correctness    : 36.5 % +7.1 -6.7 ( HMM 4_5 )
+   - Confidence lvl.: 95 %
+   Time: 136 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_5
+   - Dst. model ID : 4_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_6.hmm ... ok
+   Time: 131 s
+
+// HMM assessment
+   - Model ID      : 4_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_6_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 75 of 200
+   - Correctness    : 37.5 % +7.1 -6.7 ( HMM 4_6 )
+   - Confidence lvl.: 95 %
+   Time: 144 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_6
+   - Dst. model ID : 4_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_7.hmm ... ok
+   Time: 131 s
+
+// HMM assessment
+   - Model ID      : 4_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_7_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 78 of 200
+   - Correctness    : 39 % +7.1 -6.8 ( HMM 4_7 )
+   - Confidence lvl.: 95 %
+   Time: 151 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_7
+   - Dst. model ID : 4_8
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_8.hmm ... ok
+   Time: 132 s
+
+// HMM assessment
+   - Model ID      : 4_8
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_8_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_8_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 77 of 200
+   - Correctness    : 38.5 % +7.1 -6.8 ( HMM 4_8 )
+   - Confidence lvl.: 95 %
+   Time: 125 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_8
+   - Dst. model ID : 4_9
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_9.hmm ... ok
+   Time: 130 s
+
+// HMM assessment
+   - Model ID      : 4_9
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_9_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_9_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 78 of 200
+   - Correctness    : 39 % +7.1 -6.8 ( HMM 4_9 )
+   - Confidence lvl.: 95 %
+   Time: 128 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_9
+   - Dst. model ID : 4_10
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_10.hmm ... ok
+   Time: 130 s
+
+// HMM assessment
+   - Model ID      : 4_10
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_10_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_10_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 79 of 200
+   - Correctness    : 39.5 % +7.1 -6.8 ( HMM 4_10 )
+   - Confidence lvl.: 95 %
+   Time: 132 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 4_10
+   - Dst. model ID : 4_11
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_11.hmm ... ok
+   Time: 131 s
+
+// HMM assessment
+   - Model ID      : 4_11
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_11_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-4_11_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 80 of 200
+   - Correctness    : 40 % +7.1 -6.8 ( HMM 4_11 )
+   - Confidence lvl.: 95 %
+   Time: 136 s
+  
+// HMM split
+   - Src. model ID : 4_0
+   - Dst. model ID : 5_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+
+   Reading /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/4_0.hmm ..... ok
+   Splitting all Gaussians of 20 models ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_0.hmm ... ok
+   Time: 6 s
+
+// HMM assessment
+   - Model ID      : 5_0
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_0_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_0_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 130 of 200
+   - Correctness    : 65 % +6.6 -7 ( HMM 5_0 )
+   - Confidence lvl.: 95 %
+   Time: 198 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_0
+   - Dst. model ID : 5_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_1.hmm ... ok
+   Time: 293 s
+
+// HMM assessment
+   - Model ID      : 5_1
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_1_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_1_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 122 of 200
+   - Correctness    : 61 % +6.8 -7.1 ( HMM 5_1 )
+   - Confidence lvl.: 95 %
+   Time: 198 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_1
+   - Dst. model ID : 5_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_2.hmm ... ok
+   Time: 304 s
+
+// HMM assessment
+   - Model ID      : 5_2
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_2_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_2_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 102 of 200
+   - Correctness    : 51 % +7.1 -7.1 ( HMM 5_2 )
+   - Confidence lvl.: 95 %
+   Time: 188 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_2
+   - Dst. model ID : 5_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_3.hmm ... ok
+   Time: 267 s
+
+// HMM assessment
+   - Model ID      : 5_3
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_3_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_3_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 43 of 200
+   - Correctness    : 21.5 % +6.3 -5.5 ( HMM 5_3 )
+   - Confidence lvl.: 95 %
+   Time: 188 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_3
+   - Dst. model ID : 5_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_4.hmm ... ok
+   Time: 255 s
+
+// HMM assessment
+   - Model ID      : 5_4
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_4_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_4_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 34 of 200
+   - Correctness    : 17 % +5.9 -4.9 ( HMM 5_4 )
+   - Confidence lvl.: 95 %
+   Time: 159 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_4
+   - Dst. model ID : 5_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_5.hmm ... ok
+   Time: 252 s
+
+// HMM assessment
+   - Model ID      : 5_5
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_5_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_5_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 34 of 200
+   - Correctness    : 17 % +5.9 -4.9 ( HMM 5_5 )
+   - Confidence lvl.: 95 %
+   Time: 162 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_5
+   - Dst. model ID : 5_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_6.hmm ... ok
+   Time: 235 s
+
+// HMM assessment
+   - Model ID      : 5_6
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_6_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_6_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 60 of 200
+   - Correctness    : 30 % +6.9 -6.3 ( HMM 5_6 )
+   - Confidence lvl.: 95 %
+   Time: 174 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_6
+   - Dst. model ID : 5_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_7.hmm ... ok
+   Time: 210 s
+
+// HMM assessment
+   - Model ID      : 5_7
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_7_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_7_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 61 of 200
+   - Correctness    : 30.5 % +6.9 -6.3 ( HMM 5_7 )
+   - Confidence lvl.: 95 %
+   Time: 159 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_7
+   - Dst. model ID : 5_8
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_8.hmm ... ok
+   Time: 199 s
+
+// HMM assessment
+   - Model ID      : 5_8
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_8_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_8_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 64 of 200
+   - Correctness    : 32 % +6.9 -6.4 ( HMM 5_8 )
+   - Confidence lvl.: 95 %
+   Time: 177 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_8
+   - Dst. model ID : 5_9
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_9.hmm ... ok
+   Time: 195 s
+
+// HMM assessment
+   - Model ID      : 5_9
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_9_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_9_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 53 of 200
+   - Correctness    : 26.5 % +6.7 -6 ( HMM 5_9 )
+   - Confidence lvl.: 95 %
+   Time: 152 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_9
+   - Dst. model ID : 5_10
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_10.hmm ... ok
+   Time: 195 s
+
+// HMM assessment
+   - Model ID      : 5_10
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_10_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_10_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 51 of 200
+   - Correctness    : 25.5 % +6.6 -5.9 ( HMM 5_10 )
+   - Confidence lvl.: 95 %
+   Time: 164 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_10
+   - Dst. model ID : 5_11
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_11.hmm ... ok
+   Time: 194 s
+
+// HMM assessment
+   - Model ID      : 5_11
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_11_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_11_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 52 of 200
+   - Correctness    : 26 % +6.7 -5.9 ( HMM 5_11 )
+   - Confidence lvl.: 95 %
+   Time: 165 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_11
+   - Dst. model ID : 5_12
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_12.hmm ... ok
+   Time: 191 s
+
+// HMM assessment
+   - Model ID      : 5_12
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_12_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_12_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 52 of 200
+   - Correctness    : 26 % +6.7 -5.9 ( HMM 5_12 )
+   - Confidence lvl.: 95 %
+   Time: 175 s
+  
+// HMM Baum-Welch update
+   - Src. model ID : 5_12
+   - Dst. model ID : 5_13
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/train.flst (default, exists)
+
+   Updating 20 models with 400 samples ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/5_13.hmm ... ok
+   Time: 193 s
+
+// HMM assessment
+   - Model ID      : 5_13
+   - Model dir     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model (default, exists)
+   - Feature dir   : /data/samba/komtech/public/uasr-data/bottles/common/fea/MEL_30 (fallback, exists)
+   - Log dir       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log (default, exists)
+   - File list     : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/flists/test.flst (default, exists)
+
+   Assessing 200 samples by 20 models ...
+              ___________________________________________________________
+   Progress: |0%   '     '     '     '     |50%  '     '     '     '     |100%
+             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||done
+
+   Compiling log ... done
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_13_assess.dn3 ... ok
+   Writing /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/log/hmm-5_13_assess-cmx.dn3 ... ok
+   Creating NLL histograms ... done
+
+   Evaluation result:
+   - Correct        : 51 of 200
+   - Correctness    : 25.5 % +6.6 -5.9 ( HMM 5_13 )
+   - Confidence lvl.: 95 %
+   Time: 173 s
+  
+
+// HMM.xtp completed (0 errors).
+   - Writing info file /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/../info.txt ... done
+   - Evaluation results ok
+
+
+   Analyzing 6 HMM assessment logs ...
+   - HMM 1_1: 67.5 % correct
+   - HMM 3_0: 67.8 % correct
+   - HMM 5_0: 65.3 % correct
+   - HMM 4_0: 67.3 % correct
+   - HMM 2_1: 67.3 % correct
+   - HMM 0_3: 66.3 % correct
+   Best model: 3_0
+
+ Confusion matrix:
+ data idAux
+------------------------------------------------------------------------------------------------------------------------
+             0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+          .... .... .... .... .... .... .... .... .... .... .... .... .... .... .... .... .... .... .... .... 
+  0 D010:    6    0    0    0    0    1    0    0    0    0    0    0    0    0    0    0    0    0    0    1 
+  1 D011:    0    6    0    1    0    0    0    1    0    0    0    0    0    0    0    0    0    0    0    0 
+  2 D012:    0    0    6    0    0    2    0    0    0    0    0    0    0    0    0    1    0    0    0    0 
+  3 D013:    0    2    0    9    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+  4 D014:    0    0    0    0    5    0    1    0    0    0    0    0    0    0    2    0    0    0    1    0 
+  5 D015:    1    0    3    0    2    7    1    0    0    0    0    0    0    0    0    2    0    0    0    0 
+  6 D016:    0    0    0    0    2    0    8    0    0    0    0    0    0    0    1    1    0    0    0    0 
+  7 D017:    0    0    0    0    0    0    0    8    0    0    0    0    0    0    0    0    0    0    0    0 
+  8 D018:    0    0    0    0    0    0    0    0    9    0    0    0    0    0    0    0    0    0    0    0 
+  9 D019:    0    2    0    0    0    0    0    1    1   10    0    0    0    0    0    0    0    0    0    0 
+ 10 V040:    1    0    0    0    0    0    0    0    0    0    9    0    2    2    1    0    1    0    0    0 
+ 11 V041:    0    0    0    0    0    0    0    0    0    0    0    8    1    3    0    0    0    1    0    0 
+ 12 V042:    0    0    0    0    0    0    0    0    0    0    1    0    4    2    0    0    1    0    1    0 
+ 13 V043:    0    0    0    0    0    0    0    0    0    0    0    1    2    2    0    0    0    0    0    0 
+ 14 V044:    2    0    0    0    1    0    0    0    0    0    0    0    1    0    6    0    0    1    0    0 
+ 15 V045:    0    0    1    0    0    0    0    0    0    0    0    1    0    0    0    4    0    0    0    0 
+ 16 V046:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    4    0    0    0 
+ 17 V047:    0    0    0    0    0    0    0    0    0    0    0    0    0    1    0    0    3    8    0    0 
+ 18 V048:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    1    0    7    0 
+ 19 V049:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    1    9 
+ 20  REF: D010 D011 D012 D013 D014 D015 D016 D017 D018 D019 V040 V041 V042 V043 V044 V045 V046 V047 V048 V049 
+------------------------------------------------------------------------------------------------------------------------
+
+
+   Generating info/REC_PACKDATA.cfg ... done.
+   Generating info/recognizer.cfg ... done.
+
+INVOKE: dlabpro /data/samba/komtech/public/uasr/scripts/dlabpro/tools/REC_PACKDATA.xtp rec info/REC_PACKDATA.cfg
+
+// UASR - UNIFIED APPROACH TO SPEECH SYNTHESIS AND RECOGNITION
+// REC_PACKDATA.xtp
+// Process         : newisland.kt.tu-cottbus.de/2145
+// dLabPro VID     : dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:2145
+// UASR VID        : 8BC835B8A5
+// Configuration   : info/REC_PACKDATA.cfg
+
+// RECOGNIZER DATA PACKAGING: RECOGNITION (SIMPLE GRAMMAR)
+   - Feature info  : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/feainfo.object (exists)
+   - Acoustic model: /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model/3_0.hmm (exists)
+   - Grammar       : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/info/recognizer.grm.txt (exists)
+   - Output folder : /data/samba/komtech/public/uasr-data/bottles/B_Vorversuch002_B/model
+   - SVG rendering : yes
+   - openFST export: no
+
+   Packing feature info file ... ok
+   Packing Gaussian mixture model file .... ok
+   Packing session info file ......... ok
+
+// REC_PACKDATA.xtp completed (0 errors).
+
+
+
+   Creating flists/test_wav.flst ... done.
+
+   Testing recognizer ...
+
+INVOKE: recognizer -cfg info/recognizer.cfg flists/test_wav.flst
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D010 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D011 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D012 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D013 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D014 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D015 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D016 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D017 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D018 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: D019 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V040 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V041 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V042 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V043 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V044 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V045 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V046 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V047 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V048 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: lab: V049 res: () cor: 0 acc: 0
+cmd: N:   200
+cmd: TP:  0
+cmd: TP:  0
+cmd: FP:  0
+cmd: TN:  200
+cmd: FN:  0
+cmd: TO:  0
+cmd: FO:  0
+cmd: WRR: 0.000%
+cmd: ACC: 100.000%
+cmd: FAR: 0.000%
+cmd: FRR: 0.000%

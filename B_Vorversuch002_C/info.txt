@@ -2,8 +2,8 @@ HMM Training
 ============
 
 Config.: trn
-Date   : 2016-04-21
-dLabPro: dLabPro version 2.5.5 build 36FCDCA3B1Linux(ix86,64bit)release PID:30091
+Date   : 2016-05-13
+dLabPro: dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:12521
 UASR   : 8BC835B8A5
 DB     : ?
 Host   : newisland.kt.tu-cottbus.de

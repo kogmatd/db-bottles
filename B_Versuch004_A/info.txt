@@ -2,11 +2,11 @@ HMM Training
 ============
 
 Config.: trn
-Date   : 2016-03-03
-dLabPro: dLabPro version 2.5.5 build UNKOWNwin32(ix86,32bit)release PID:6424
-UASR   : ?
+Date   : 2016-05-13
+dLabPro: dLabPro version 2.5.5 build 4FF3792FBELinux(ix86,64bit)release PID:19310
+UASR   : 8BC835B8A5
 DB     : ?
-Host   : $HOSTNAME
+Host   : newisland.kt.tu-cottbus.de
 
 Configuration Details
 =====================
