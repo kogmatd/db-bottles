@@ -7,7 +7,7 @@
 
 ## Database settings                                                            # -------------------------------------
 uasr.db                   = "bottles";                                          # Database name
-uasr.exp                  = "B_Vorversuch003_C";                                # Experiment name
+uasr.exp                  = "Vorversuch003_C";                                  # Experiment name
 
 ## Signal, preprocessing and feature settings                                   # -------------------------------------
 uasr.sig.srate            = 48000;                                              # Signal sampling rate [Hz]
