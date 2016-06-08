@@ -1,3 +1,11 @@
-Fehlende Signaldateien:
+Versuch004_B: 
+* classes.txt passt nicht zu Labels in Dateilisten --> KORRIGIERT
 
-Vorversuch003/V045/V045-000_0004.wav
+Versuch004_C: 
+* training set not unique --> KORRIGIERT
+
+fehlende Signaldateien:
+* Vorversuch003/V045/V045-000_0004
+* Versuch004/V068/V068-120_0014
+* Versuch004/V069/V069-120_0019
+* Versuch004/V069/V069-240_0015
