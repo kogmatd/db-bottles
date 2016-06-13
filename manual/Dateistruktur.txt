@@ -1,0 +1,90 @@
+bottles                                      # Wurzelverzeichnis der Datenbasis
++---common                                   # Ordner für gemeinsam genutzte Dateien
+|   +---scripts
+|   |   \---dlabpro
+|   |      \---MAKE_LIVE_MODELS              # Skript für automatische Generierung und Test der Modelle
+|   |
+|   |                                        # die sig* Ordner sind nicht im Repository enthalten 
+|   |                                        # ... und müssen nachträglich importiert werden
+|   \---sig                                  # Verzeichnis der Signaldateien der Mikrofone als Summe in WAV-Dateien
+|   |   +---Versuch004                       # Versuch004 umfasst 60 Signaldateien pro Prüfling
+|   |   |   +---B001                         # jeder Prüfling hat seinen eigenen Unterordner ...
+|   |   |   |   +---B001-000_0000.wav        # ... in welchem die Dateien mit dessen Prefix benannt sind, ...
+|   |   |   |   +---B001-000_0001.wav        # ... die Nummerierung startet ab der jeweiligen Aufnahme, ...
+|   |   |   |   ...                          # ... und wird 4-stellig angegeben
+|   |   |   |   +---B001-000_0019.wav        # es wurden 20 Aufnahmen pro Winkel im Versuch004 erstellt
+|   |   |   |   +---B001-120_0000.wav
+|   |   |   |   ...
+|   |   |   |   +---B001-120_0019.wav
+|   |   |   |   +---B001-240_0000.wav        # pro Flasche wurden 3 Winkel aufgenommen, 0°, 120° und 240°
+|   |   |   |   ...
+|   |   |   |   +---B001-240_0019.wav
+|   |   |   +---B002                         # Es sind 3 Prüflinge der Klasse B "broken" zugeordnet, ...
+|   |   |   +---B003                         # ... was die original beschädigten Flaschen bezeichnet
+|   |   |   +---D010                         # die Prüflinge D010 bis D019 sind der Klasse destroyed ...
+|   |   |   ...                              # ... zugeordnet, was die von uns bewusst zerstörten ...
+|   |   |   +---D019                         # ... Flaschen bezeichnet
+|   |   |   +---V040                         # die restlichen 120 Prüflinge sind der Klasse valid ...
+|   |   |   ...                              # ... zugeordnet, was die schadlosen Flaschen umfasst, ...
+|   |   |   \---V160                         # ... die Nummerierung lässt Platz für etwagige neue zerstörte Flaschen
+|   |   +---Vorversuch001                    # die Vorversuche001 + 002 umfassen lediglich die Prüflinge D010 bis D019
+|   |   +---Vorversuch002                    # ... sowie die Prüflinge V040 bis V049 zu je 30 Aufnahmen 
+|   |   \---Vorversuch003                    # Vorversuch003 umfasst 60 Aufnahmen derselben Prüflinge wie Vorversuch001
+|   +---sig_hammer                           # beinhaltet die Aufzeichnungen des Modalhammers als WAV-Datei
+|   |   +---Versuch004
+|   |   |   +---B001                         # die Struktur der WAV-Dateien ist analog zur Struktur im sig-Verzeichnis,
+|   |   |   |   +---B001-000_0000.hs.wav     # ... nur das hier vor der .wav-Endung noch ein .hs eingefügt ist
+|   |   |   \---V160                         # ... und die Vorversuche001 und 002 fehlen, da erst ab
+|   |   \---Vorversuch003                    # ... Vorversuch003 der Modalhammer verwendet wurde
+|   +---sig_meta                             # beinhaltet den Effektivwert des Hammersignales als txt-Datei
+|   |   +---Versuch004
+|   |   \---Vorversuch003
+|   |       +---B001
+|   |       |   +---B001-000_0000.txt        # die Struktur der txt-Dateien ist analog zu der Struktur
+|   |       ...                              # ... der WAV-Dateien aus dem sig_hammer Verzeichnis
+|   |       \---V160
+|   +---sig_single                           # beinhaltet die einzelnen WAV-Dateien der Mikrofone
+|   |   +---Versuch004                       # die Struktur ist analog zu dem sig Verzeichnis, ...
+|   |   |   +---B001
+|   |   |   |   +---B001-000_0000.ai0.wav    # ... nur wurden hier für jede Aufnahme 4 WAV-Dateien erstellt, ...
+|   |   |   |   +---B001-000_0000.ai1.wav    # ... die die Nummerierung der Mikrofone zu den Eingängen ...
+|   |   |   |   +---B001-000_0000.ai2.wav    # ... ai0 bis ai3 als Endung vor der .wav Endung eingefügt haben.
+|   |   |   |   +---B001-000_0000.ai3.wav
+|   |   ...
+|   |   +---Vorversuch001                    # Einzelaufnahmen liegen für alle 4 Versuche vor
+|   |   +---Vorversuch002
+|   |   \---Vorversuch003
+|   \---Vorlage                              # eine leere Ordnerstruktur von Versuch004       
++---manual                                   # enhaelt die Hilfedateien
+|   +---Dateistruktur                        # dieses Dokument
+|   \---MiSIS-Database                       # ausführliche Beschreibung der Datenbasis
++---src
+|   \---utilities
+|   |   +---filoperations.java               # erstellt Filelisten und wandelt log-Dateien um, Main auch für NameToFile.java
+|   |   \---NameToFile.java                  # wurde für Hammersignaldateien benutzt, ist ab Mikrofonfeld B.5 nicht mehr nötig
+|   \---Mikrofonfeld B.5                     # vi zur Erstellung der Aufnahmen
++---Versuch004_A
++---Versuch004_B
+|   +---flists                               # dieser Ordner sollte bei einem neuen Versuch leer sein
+|   \---info                                 # dieser Ordner muss mit 2 Dateien befüllt sein:
+|       +---classes.txt                      # gibt an, wie viele Klassen mit jeweils wie vielen HMM-Zuständen traininert werden 
+|       \---Versuch004_B.mcfg                # zentrale Datei zum Verwalten des Versuches mit MiSIS-Oberflaeche/Plugin
++---Versuch004_C
+|   +---flists                               # Verzeichnis mit den Filelisten fuers Training des aktuellen Versuchs
+|   |   +---all.flst                         # Filelist für alle dem Experiment angehörigen Dateien
+|   |   +---test.flst                        # zum Test gehörige Dateien
+|   |   \---train.flst                       # Dateien für Training, dürfen keine Test-Dateien enthalten
+|   +---info                                 # Konfigurationsdateien fuer HMM-Training
+|   |   +---classes.txt
+|   |   \---Versuch004_C.mcfg                # die mcfg-Datei sollte als einzige für einen neuen Versuch editiert werden
+|   +---log                                  # hier können Informationen zum Training und den Modellen mit dem MiSIS-Plugin abgerufen werden
+|   \---model                                # hier werden die eigentlichen Model-Daten gespeichert, die für eine Erkennung nötig sind
++---Vorversuch001_A
++---Vorversuch001_B
++---Vorversuch001_C                          # für jeden (Vor-)Versuch wurden 3 Experimente durchgeführt:             
++---Vorversuch002_A                          # _A: eine Erkennung der Klassen B,C,V durch zufälliger ungruppierter Auswahl pro Prüfling
++---Vorversuch002_B                          # _B: eine Erkennung der jeweiligen Flasche durch zufällige Auswahl pro Prüfling,
++---Vorversuch002_C                          # _C: eine Erkennung der Klassen B,C,V durch zufällige Wahl nach Prüfling gruppierter Werte
++---Vorversuch003_A
++---Vorversuch003_B
++---Vorversuch003_C                          # es wurden 3x3 Vorversuche und 3x1 Versuch durchgeführt
