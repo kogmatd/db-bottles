@@ -1,0 +1,77 @@
+#!/usr/bin/env dlabpro
+## UASR: Bottles database
+## - Evaluation of mixed Gaussian HMMs
+##
+## AUTHOR : Matthias Wolff
+## PACKAGE: uasr-data/bottles/common/scripts/dlabpro
+##
+## ARGUMENTS:
+##   $1: Configuration file
+
+"$UASR_HOME/scripts/dlabpro/util/cfg.itp"  include;                             # Configuration utilities
+"$UASR_HOME/scripts/dlabpro/util/os.itp"   include;                             # OS utilities
+"$UASR_HOME/scripts/dlabpro/util/uasr.itp" include;                             # UASR utilities
+"$UASR_HOME/scripts/dlabpro/util/var.itp"  include;                             # Variables' utilities
+"$UASR_HOME/scripts/dlabpro/util/am.itp"   include;                             # AM utilities
+"$UASR_HOME/scripts/dlabpro/util/fea.itp"  include;                             # Feature utilities
+"$UASR_HOME/scripts/dlabpro/util/fst.itp"  include;                             # FST utilities
+"$UASR_HOME/scripts/dlabpro/util/lab.itp"  include;                             # Label utilities
+"$UASR_HOME/scripts/dlabpro/util/lm.itp"   include;                             # Lexicon utilities
+"$UASR_HOME/scripts/dlabpro/util/lx.itp"   include;                             # Language model utilities
+"$UASR_HOME/scripts/dlabpro/util/sig.itp"  include;                             # Signal utilities
+"$UASR_HOME/scripts/dlabpro/util/spp.itp"  include;                             # Signal preprocessing utilities
+"$UASR_HOME/scripts/dlabpro/train/am.itp"  include;                             # AM training utilities
+
+"\n// UASR - UNIFIED APPROACH TO SIGNAL SYNTHESIS AND RECOGNITION"        -MSG; # Console log               
+"\n// $__SFILE__.xtp"                                                     -MSG; # Console log
+"\n// Process         : $HOSTNAME/" -pid +                                -MSG; # Console log
+"\n// dLabPro VID     : " -version +                                      -MSG; # Console log
+"\n// UASR VID        : " -UASR_version +                                 -MSG; # Console log
+
+## Intialize UASR session
+"\n// Configuration   : $1"                                               -MSG; # Console log
+"$1" TRUE -CFG_init;                                                            # Configure session
+"$UASR_HOME/scripts/dlabpro/util/uasr_session.itp" include;                     # Include UASR session startup script
+TRUE .__CFG_bNwr =;                                                             # Set write protections
+
+## Variables                                                                    # -------------------------------------
+hmm    itHMM;                                                                   # Acoustic model
+object iFI;                                                                     # Feature information object
+var    sAmId;  ( "am.model" "" -CFG_get ) sAmId -sset;                          # The HMM indentifier
+var    sDirMod;                                                                 # The model folder
+var    nS;                                                                      # Split number
+var    nI;                                                                      # Iteration number
+data   idAux;                                                                   # Auxiliary data
+"\n\n// HMM MIXED GAUSSIAN EVALUATION"                                    -MSG; # Console log
+"model"  "S" -CFG_get_path sDirMod =;                                           # Silently get model directory
+
+## Load acoustic models                                                         # -------------------------------------
+"$[sDirMod]/feainfo.object" iFI -FEA_info;                                      # Feature information object
+( sAmId "_" "split" -VAR_strop ) idAux =;                                       # Model ID at underscores
+0 0 idAux -sfetch nS -vset;                                                     # Get first split (cast to number!)
+0 1 idAux -sfetch nI -vset;                                                     # Get first itertn. (cast to number!)
+"\n   - Model ID      : $[sAmId] (split=$[nS], iteration=$[nI])"          -MSG; # Console log
+.__CFG_bNwr if "\n   - Write protect : " "ON" -COLOR_yellow + -MSG; end         # Console log
+"$[sDirMod]/$[sAmId].hmm" iFI.nDim itHMM -HMM_load not if                       # Try loading the HMM set, failed >>
+  "FATAL: Cannot load HMMs" -ERROR;                                             #   No go!
+  goto L_EXCEPTION;                                                             #   Get out
+end                                                                             # << HMM set ok >>
+( itHMM -AM_check not ) ( itHMM.gm NULL == ) || if                              # HMMs invalid >>
+  "FATAL: HMMs invalid" -ERROR;                                                 #   No go!
+  goto L_EXCEPTION;                                                             #   Get out
+end                                                                             # << HMM set ok >>
+
+## Do evaluatiion of mixed-Gaussian models                                      # -------------------------------------
+itHMM -gmm_mix;                                                                 # Mix Gaussians
+itHMM "" nS nI -HMM_assess;                                                     # Do evaluation
+
+"\n\n// $__SFILE__.xtp completed (${.__UTL_nErrors} errors).\n"           -MSG; # Console log
+0 return;                                                                       # Return OK
+
+## On exceptions                                                                # -------------------------------------
+label L_EXCEPTION                                                               # Exception label
+"\n// $__SFILE__.xtp FAILED (${.__UTL_nErrors} errors).\n"                -MSG; # Console log
+1 return;                                                                       # Return error code
+
+## EOF
+
