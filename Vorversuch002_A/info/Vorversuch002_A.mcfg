@@ -34,7 +34,7 @@ uasr.am.train.ite5        = 13;                                                 
 uasr.am.train.ite6        = 7;                                                  # Number of iterations at split 6
 uasr.am.train.ite7        = 7;                                                  # Number of iterations at split 7
 uasr.am.train.splitbest   = TRUE;                                               # Use the best HMM for split
-uasr.am.model             = "5_0";                                              # Default model for recogn./synthesis
+uasr.am.model             = "4_4";                                              # Default model for recogn./synthesis
 uasr.am.sil               = -1;                                                 # No silence model
 uasr.am.gbg               = -1;                                                 # No garbage model
 
