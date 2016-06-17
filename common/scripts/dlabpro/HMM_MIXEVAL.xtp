@@ -22,7 +22,7 @@
 "$UASR_HOME/scripts/dlabpro/util/spp.itp"  include;                             # Signal preprocessing utilities
 "$UASR_HOME/scripts/dlabpro/train/am.itp"  include;                             # AM training utilities
 
-"\n// UASR - UNIFIED APPROACH TO SIGNAL SYNTHESIS AND RECOGNITION"        -MSG; # Console log               
+"\n// UASR - UNIFIED APPROACH TO SIGNAL SYNTHESIS AND RECOGNITION"        -MSG; # Console log
 "\n// $__SFILE__.xtp"                                                     -MSG; # Console log
 "\n// Process         : $HOSTNAME/" -pid +                                -MSG; # Console log
 "\n// dLabPro VID     : " -version +                                      -MSG; # Console log
@@ -30,6 +30,7 @@
 
 ## Intialize UASR session
 "\n// Configuration   : $1"                                               -MSG; # Console log
+"$2" "--nomix" == if "\n// Mode            : no mix" -MSG; end                  # Console log
 "$1" TRUE -CFG_init;                                                            # Configure session
 "$UASR_HOME/scripts/dlabpro/util/uasr_session.itp" include;                     # Include UASR session startup script
 TRUE .__CFG_bNwr =;                                                             # Set write protections
@@ -62,7 +63,9 @@ end                                                                             
 end                                                                             # << HMM set ok >>
 
 ## Do evaluatiion of mixed-Gaussian models                                      # -------------------------------------
-itHMM -gmm_mix;                                                                 # Mix Gaussians
+"$2" "--nomix" != if                                                            # Mixing not disabled >>
+  itHMM -gmm_mix;                                                               #   Mix Gaussians
+end                                                                             # <<
 itHMM "" nS nI -HMM_assess;                                                     # Do evaluation
 
 "\n\n// $__SFILE__.xtp completed (${.__UTL_nErrors} errors).\n"           -MSG; # Console log
