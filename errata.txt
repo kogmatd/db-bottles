@@ -5,7 +5,7 @@ Versuch004_C:
 * training set not unique --> KORRIGIERT
 
 fehlende Signaldateien:
-* Vorversuch003/V045/V045-000_0004
-* Versuch004/V068/V068-120_0014
-* Versuch004/V069/V069-120_0019
-* Versuch004/V069/V069-240_0015
+* Vorversuch003/V045/V045-000_0004 --> korrigiert
+* Versuch004/V068/V068-120_0014 --! datei ist leer und wurde aus Dateilisten entfernt
+* Versuch004/V069/V069-120_0019 --! datei ist leer und wurde aus Dateilisten entfernt
+* Versuch004/V069/V069-240_0015 --! datei ist leer und wurde aus Dateilisten entfernt
