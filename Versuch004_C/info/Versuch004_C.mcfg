@@ -38,4 +38,15 @@ uasr.am.model             = "1_0";                                              
 uasr.am.sil               = -1;                                                 # No silence model
 uasr.am.gbg               = -1;                                                 # No garbage model
 
+## Fix-point recognizer settings                                                # -------------------------------------
+## For details see:
+##   dlabpro $UASR_HOME/scripts/dlabpro/tools/REC_PACKDATA.xtp help rec -Pouttyp=F
+uasr.recfix.nrm.frm       = 0.2;
+uasr.recfix.nrm.trf       = 4;
+uasr.recfix.nrm.fil       = 3;
+uasr.recfix.nrm.dlt1      = 5;
+uasr.recfix.nrm.dlt2      = 8;
+uasr.recfix.nrm.pca       = 16;
+uasr.recfix.trg.mode      = 0;
+
 ## EOF
