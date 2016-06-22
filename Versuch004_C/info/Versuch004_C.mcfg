@@ -37,6 +37,7 @@ uasr.am.train.splitbest   = TRUE;                                               
 uasr.am.model             = "1_0";                                              # Default model for recogn./synthesis
 uasr.am.sil               = -1;                                                 # No silence model
 uasr.am.gbg               = -1;                                                 # No garbage model
+#uasr.am.train.act0        = "split,mix";                                        # Train GMMs, not single Gaussians
 
 ## Fix-point recognizer settings                                                # -------------------------------------
 ## For details see:
