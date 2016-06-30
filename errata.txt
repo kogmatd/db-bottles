@@ -1,0 +1,23 @@
+2016-06-20
+  Vorversuch003/V045/V045-000_0004.wav fehlt 
+  --> KORRIGIERT
+
+2016-06-20
+  Versuch004/V068/V068-120_0014.wav fehlt 
+  --! Datei ist leer und wurde aus Dateilisten entfernt
+
+2016-06-20
+  Versuch004/V069/V069-120_0019.wav fehlt 
+  --! Datei ist leer und wurde aus Dateilisten entfernt
+
+2016-06-20
+  Versuch004/V069/V069-240_0015.wav fehlt 
+  --! Datei ist leer und wurde aus Dateilisten entfernt
+  
+2016-06-08
+  Versuch004_B: classes.txt passt nicht zu Labels in Dateilisten 
+  --> KORRIGIERT
+
+2016-06-08
+  Versuch004_C: training set not unique 
+  --> KORRIGIERT
