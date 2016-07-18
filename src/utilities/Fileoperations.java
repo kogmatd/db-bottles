@@ -16,8 +16,8 @@ public class Fileoperations {
 	/*
 	 * Liest alle Wav-Dateien eines Verzeichnisses aus,
 	 * die das Schema Klassenname + "_" + restlicherDateiname + ".wav" besitzen.
-	 * und in den Ordnern beginnend mit "C" (für Summenaufnahmen) oder "E" (für Einzelaufnahmen) enthalten sind.
-	 * Die Ordner müssen direkte Unterverzeichnisse sein, oder in Verzeichnissen mit C/E gekennzeichnet enthalten sein.
+	 * und in den Ordnern beginnend mit "B" "D" oder "V" (Bezeichnung der Klassen) enthalten sind.
+	 * Die Ordner müssen direkte Unterverzeichnisse sein, oder in Verzeichnissen mit B/D/V b enthalten sein.
 	 * Die Ordner müssen zusätzlich im "sig" Oberverzeichnis angelegt sein (z.B: $UASR_HOME-data/coins/common/sig/C001).
 	 * Geschrieben wird der relativ zum sig-Verzeichnisses Verzeichnisname + Dateiname (ohne .wav) + Leerzeichen + Klassenname
 	 * 
@@ -25,10 +25,7 @@ public class Fileoperations {
 	 * dir: Unterverzeichnis von sig, enthält Dateien
 	 * mic: (-1) Summe wird verwendet
 	 *      (0...3) Ausgewaehltes Mikrofon
-	 *      
-	 * | Alt 124
-	 * > Alt 62
-	 * < Alt 60
+	 * modus: entscheidung der Klassennamentiefe, weiteres siehe setModus     
 	 */
 	public static String allWavpath(File dir, Integer mic, Integer modus) {	
 		String out = new String();
@@ -86,14 +83,9 @@ public class Fileoperations {
 						}
 					}
 				} else if (files[i].isDirectory()) { //Verzeichnis gefunden, rekursiver Aufruf
-					if (mic == -1) {
 						if (files[i].getName().startsWith("V") || files[i].getName().startsWith("D")
 								|| files[i].getName().startsWith("B"))
 							out += allWavpath(files[i], mic, modus);
-					} else {
-						if (files[i].getName().startsWith("E")) { //ehemalige Verzeichnisse für einzelne Dateien
-							out += allWavpath(files[i], mic, modus);
-						}
 					}
 				}
 			}
