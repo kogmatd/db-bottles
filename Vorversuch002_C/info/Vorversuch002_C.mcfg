@@ -49,6 +49,6 @@ uasr.am.gbg               = -1;                                                 
 #uasr.recfix.nrm.pca       = 16;
 uasr.recfix.trg.mode      = 0;
 
-uasr.recfix.fftshfcfg     = 8;
+uasr.recfix.fftshfcfg     = 384;
 
 ## EOF
