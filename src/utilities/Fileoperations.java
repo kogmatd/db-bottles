@@ -89,7 +89,6 @@ public class Fileoperations {
 					}
 				}
 			}
-		}
 		out = out.replace("\\","/");
 		return out;
 	}
@@ -372,7 +371,8 @@ public static String transform(File logfile) {
 					+ "(1) Filelisten generieren, \n"                    //generiert all.flst aus Unterordnern
 					+ "(2) Ergebnisse aus der Logdatei extrahieren, \n"  //filtert nach Zeilen, die "Correctness" enthalten
 					+ "(3) Hammersignale in txt datei schreiben, \n"     //extrahiert Bezeichnung zwischen "_HS" und Nr. in Meta-txt-Datei
-					+ "(4) Hammerangabe aus Datei entfernen oder \n"     //nennt Dateien um, sodass die o.g. Bezeichnung entfernt wird
+					+ "(4) Hammerangabe aus Datei entfernen, \n"     //nennt Dateien um, sodass die o.g. Bezeichnung entfernt wird
+					+ "(5) Ergebnisse von der Liveerkennung ermitteln oder \n"//extrahiert Daten von Live-txt-Datei
 					+ "(e) das Programm beenden?");                      //beendet java-Programm
 			String eingabe = new String();
 			eingabe = sc.next();
@@ -428,7 +428,7 @@ public static String transform(File logfile) {
 				break;
 				
 			case "3":
-			{ // AUSWERTUNG LOGDATEI
+			{ //Hammersignaltxt erstellen
 		        String uasr = System.getenv("UASR_HOME");
 				File dir = new File (uasr + "-data\\bottles\\common\\sig_hammer"); //Standardpfad für Hammersignale
 				System.out.print("Hammersignal-");
@@ -439,7 +439,7 @@ public static String transform(File logfile) {
 			break;
 			
 			case "4":
-			{ // AUSWERTUNG LOGDATEI
+			{ // Umbenennen
 		        String uasr = System.getenv("UASR_HOME");
 				File dir = new File (uasr + "-data\\bottles\\common"); //Standardpfad für zu ändernde Dateinamen
 				System.out.print("Signal-");
@@ -447,6 +447,28 @@ public static String transform(File logfile) {
 		        String out = NameToFile.renameIt(file); //hier die eigentliche Verarbeitung
 				System.out.println(out);
 		  	}
+			break;
+			
+			case "5":
+			{ // Erkennungsfile zusammenfassen
+		        String uasr = System.getenv("UASR_HOME");
+				File dir = new File (uasr + "-data\\bottles\\"); //Standardpfad für Logdatei
+				System.out.print("Logdatei-");
+				File logfile = filechoose(dir, sc);
+		        String out = Compress.compress(logfile); //hier die eigentliche Verarbeitung
+				boolean jn = true;
+				while (jn) {
+					jn = !filewritedialog(dir, out, sc);
+					if (jn) {
+						System.out.println("Erneut probieren? j/n");
+						eingabe = sc.next();
+						if (!eingabe.equals("n")) {
+							continue;
+						}
+					}
+					break;
+				}
+			}
 			break;
 			
 			case "e":
