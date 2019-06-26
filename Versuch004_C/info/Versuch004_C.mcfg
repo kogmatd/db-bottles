@@ -48,6 +48,13 @@ uasr.am.gbg               = -1;                                                 
 #uasr.recfix.nrm.dlt1      = 5;
 #uasr.recfix.nrm.dlt2      = 8;
 #uasr.recfix.nrm.pca       = 16;
-uasr.recfix.trg.mode      = 0;
+uasr.recfix.prnw          = 0;
+uasr.recfix.trg.mode      = 2;
+uasr.recfix.trg.thr1      = 0.01; # Trigger level
+uasr.recfix.trg.thr2      = 0;
+uasr.recfix.trg.off1      = -10;  # Pretrigger 10 frames = 33ms
+uasr.recfix.trg.off2      = 120;  # Trigger length 120 frames = 400ms
+uasr.recfix.trg.mino      = 300;  # Minimal deaktivation time 300 frames = 1s
+
 
 ## EOF
