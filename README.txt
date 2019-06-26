@@ -4,7 +4,7 @@
    nach $UASR_HOME-data/bottles
 
 2. Kopiere oder verlinke
-    von newisland:/data/samba/komtech/public/uasr-data/bottles/common/
+    von newisland.kt.tu-cottbus.de:/data/samba/komtech/public/uasr-data/bottles/common/
     nach $UASR_HOME-data/bottles/common/
     folgende Verzeichnisse:
         sig_meta/Vorversuch003
