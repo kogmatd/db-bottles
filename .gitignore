@@ -1,0 +1,7 @@
+/common/sig/*
+/common/sig_*/*
+.*.swp
+.*.swo
+log
+model
+fea
