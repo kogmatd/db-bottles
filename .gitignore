@@ -6,3 +6,5 @@ log
 model
 fea
 .svn
+/scripts/.idea/*
+.settings/*
