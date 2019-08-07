@@ -6,5 +6,7 @@ log
 model
 fea
 .svn
-/scripts/.idea/*
+.project
 .settings/*
+scripts/.idea/*
+scripts/__pycache__/*
