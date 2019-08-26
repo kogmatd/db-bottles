@@ -165,7 +165,7 @@ def rnnopt(x_train, y_train, params):
 def cnnopt(x_train, y_train, params):
     history = None
     model = None
-    return  history, model
+    return history, model
 
 
 if len(sys.argv) < 2:

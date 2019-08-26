@@ -66,6 +66,13 @@ if labmap is not None:
     ftst.maplab(labmap)
 lcls = np.array(ftst.getcls())
 
+classes, states = getstates(labmap)
+
+fcls = np.array(classes)
+
+if lcls.shape != fcls.shape:
+    lcls = fcls
+
 if regression:
     icls.labf(ftst)
     lab = np.array([f['labf'] for f in ftst])
@@ -79,6 +86,14 @@ for fn in argv2resfns('res_', sys.argv[2:]):
     res = np.load(fn)
     if res.shape == (0,):
         continue
+    if res.shape[1] == 1:# transform to proper binary class representation
+        res_exp = []
+        for r in res:
+            res_temp = [0, 0]
+            res_temp[np.round(r[0]).astype(int)] = 1
+            res_exp.append(res_temp)
+        res = np.array(res_exp)
+
     h = {'res': res}
     if os.path.exists(fn[:-4]+'_trn.npy'):
         h['res_trn'] = np.load(fn[:-4]+'_trn.npy')
@@ -87,6 +102,7 @@ for fn in argv2resfns('res_', sys.argv[2:]):
     else:
         if cls == 'hmm':
             res = -res
+            h['res'] = res
         if res.shape[1] == 1:
             h['resc'] = resc = lcls[np.round(res[:, 0]).astype(int)]
         else:
@@ -162,8 +178,12 @@ for fea in feas:
                 for lref in lcls:
                     cmx[lref] = dict()
                     for lres in lcls:
+                        temp_sum = np.sum([f['lab'] == lref for f in ftst])
+                        if temp_sum == 0:  # handle case when a class is missing in the tests
+                            cmx[lref][lres] = 0
+                            continue
                         cmx[lref][lres] = np.sum(resc[np.array([f['lab'] == lref for f in ftst])] == lres)
-                        cmx[lref][lres] /= np.sum([f['lab'] == lref for f in ftst])
+                        cmx[lref][lres] /= temp_sum
                 cmxmax = np.max([cmx[lref][lres] for lref in lcls for lres in lcls if lres != lref])
                 cmxmaxl = str.join(' ', [lref+'=>'+lres for lref in lcls for lres in lcls if lres != lref
                                          and cmx[lref][lres] == cmxmax])
