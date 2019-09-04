@@ -50,6 +50,8 @@ uasr.am.gbg               = -1;                                                 
 uasr.recfix.trg.mode      = 0;
 
 
+uasr.trn.folds = 5
+
 ## HMMs
 uasr.trnargs.hmm.pfa = "{'states':1, 'its': [0]}
 
