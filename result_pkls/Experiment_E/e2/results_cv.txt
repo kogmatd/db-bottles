@@ -1,0 +1,259 @@
+### Cross-Validation ###
+
+pfa  cnn [  1] best  98.8%/bottles mix  99.8% MAX-ER:   2.3% (B=>V)
+
+best:
+	accuracy:	0.9875 (0.0098)
+	f1-score:	0.9784 (0.0098)
+	precision:	0.9702 (0.0189)
+	recall:		0.9875 (0.0098)
+
+mix:
+
+	MCC: 0.9566:
+
+	AUC: 0.9998:
+              precision    recall  f1-score   support
+
+           B       0.94      0.98      0.96       300
+           V       1.00      1.00      1.00     11780
+
+    accuracy                           1.00     12080
+   macro avg       0.97      0.99      0.98     12080
+weighted avg       1.00      1.00      1.00     12080
+
+
+pfa  hmm [  1] best  97.3%/bottles mix  98.4% MAX-ER:   4.0% (B=>V)
+
+best:
+	accuracy:	0.9725 (0.0040)
+	f1-score:	0.8730 (0.0042)
+	precision:	0.8099 (0.0055)
+	recall:		0.9725 (0.0040)
+
+mix:
+
+	MCC: 0.7653:
+
+	AUC: 0.7846:
+              precision    recall  f1-score   support
+
+           B       0.62      0.96      0.75       300
+           V       1.00      0.99      0.99     11780
+
+    accuracy                           0.98     12080
+   macro avg       0.81      0.97      0.87     12080
+weighted avg       0.99      0.98      0.99     12080
+
+
+pfa  snn [  1] best  86.8%/bottles mix  99.3% MAX-ER:  26.3% (B=>V)
+
+best:
+	accuracy:	0.8683 (0.0255)
+	f1-score:	0.9220 (0.0175)
+	precision:	0.9967 (0.0006)
+	recall:		0.8683 (0.0255)
+
+mix:
+
+	MCC: 0.8554:
+
+	AUC: 0.9851:
+              precision    recall  f1-score   support
+
+           B       1.00      0.74      0.85       300
+           V       0.99      1.00      1.00     11780
+
+    accuracy                           0.99     12080
+   macro avg       1.00      0.87      0.92     12080
+weighted avg       0.99      0.99      0.99     12080
+
+
+pfa  svm [  1] best  91.3%/bottles mix  99.6% MAX-ER:  17.3% (B=>V)
+
+best:
+	accuracy:	0.9133 (0.0067)
+	f1-score:	0.9514 (0.0041)
+	precision:	0.9978 (0.0002)
+	recall:		0.9133 (0.0067)
+
+mix:
+
+	MCC: 0.9072:
+
+	AUC: 0.9994:
+              precision    recall  f1-score   support
+
+           B       1.00      0.83      0.91       300
+           V       1.00      1.00      1.00     11780
+
+    accuracy                           1.00     12080
+   macro avg       1.00      0.91      0.95     12080
+weighted avg       1.00      1.00      1.00     12080
+
+
+
+sfa  cnn [  1] best  96.1%/bottles mix  99.7% MAX-ER:   7.7% (B=>V)
+
+best:
+	accuracy:	0.9612 (0.0114)
+	f1-score:	0.9711 (0.0083)
+	precision:	0.9816 (0.0058)
+	recall:		0.9612 (0.0114)
+
+mix:
+
+	MCC: 0.9426:
+
+	AUC: 0.9990:
+              precision    recall  f1-score   support
+
+           B       0.97      0.92      0.94       300
+           V       1.00      1.00      1.00     11780
+
+    accuracy                           1.00     12080
+   macro avg       0.98      0.96      0.97     12080
+weighted avg       1.00      1.00      1.00     12080
+
+
+sfa  hmm [  1] best  76.8%/bottles mix  98.8% MAX-ER:  46.3% (B=>V)
+
+best:
+	accuracy:	0.7682 (0.0249)
+	f1-score:	0.8426 (0.0200)
+	precision:	0.9822 (0.0060)
+	recall:		0.7682 (0.0249)
+
+mix:
+
+	MCC: 0.7191:
+
+	AUC: 0.8665:
+              precision    recall  f1-score   support
+
+           B       0.98      0.54      0.69       300
+           V       0.99      1.00      0.99     11780
+
+    accuracy                           0.99     12080
+   macro avg       0.98      0.77      0.84     12080
+weighted avg       0.99      0.99      0.99     12080
+
+
+sfa  snn [  1] best  78.1%/bottles mix  98.9% MAX-ER:  43.7% (B=>V)
+
+best:
+	accuracy:	0.7815 (0.0490)
+	f1-score:	0.8511 (0.0352)
+	precision:	0.9828 (0.0155)
+	recall:		0.7815 (0.0490)
+
+mix:
+
+	MCC: 0.7352:
+
+	AUC: 0.9914:
+              precision    recall  f1-score   support
+
+           B       0.97      0.56      0.71       300
+           V       0.99      1.00      0.99     11780
+
+    accuracy                           0.99     12080
+   macro avg       0.98      0.78      0.85     12080
+weighted avg       0.99      0.99      0.99     12080
+
+
+sfa  svm [  1] best  75.2%/bottles mix  98.8% MAX-ER:  49.7% (B=>V)
+
+best:
+	accuracy:	0.7516 (0.0220)
+	f1-score:	0.8296 (0.0197)
+	precision:	0.9872 (0.0082)
+	recall:		0.7516 (0.0220)
+
+mix:
+
+	MCC: 0.7002:
+
+	AUC: 0.9799:
+              precision    recall  f1-score   support
+
+           B       0.99      0.50      0.67       300
+           V       0.99      1.00      0.99     11780
+
+    accuracy                           0.99     12080
+   macro avg       0.99      0.75      0.83     12080
+weighted avg       0.99      0.99      0.99     12080
+
+
+
+sig  cnn [  1] best  84.0%/bottles mix  98.9% MAX-ER:  31.7% (B=>V)
+
+best:
+	accuracy:	0.8402 (0.0339)
+	f1-score:	0.8766 (0.0331)
+	precision:	0.9233 (0.0353)
+	recall:		0.8402 (0.0339)
+
+mix:
+
+	MCC: 0.7587:
+
+	AUC: 0.9673:
+              precision    recall  f1-score   support
+
+           B       0.85      0.68      0.76       300
+           V       0.99      1.00      0.99     11780
+
+    accuracy                           0.99     12080
+   macro avg       0.92      0.84      0.88     12080
+weighted avg       0.99      0.99      0.99     12080
+
+
+sig  snn [  1] best  51.0%/bottles mix  97.3% MAX-ER:  97.7% (B=>V)
+
+best:
+	accuracy:	0.5102 (0.0078)
+	f1-score:	0.5128 (0.0132)
+	precision:	0.5612 (0.0376)
+	recall:		0.5102 (0.0078)
+
+mix:
+
+	MCC: 0.0547:
+
+	AUC: 0.6861:
+              precision    recall  f1-score   support
+
+           B       0.17      0.02      0.04       300
+           V       0.98      1.00      0.99     11780
+
+    accuracy                           0.97     12080
+   macro avg       0.57      0.51      0.51     12080
+weighted avg       0.96      0.97      0.96     12080
+
+
+sig  svm [  1] best  60.1%/bottles mix  97.3% MAX-ER:  79.0% (B=>V)
+
+best:
+	accuracy:	0.6013 (0.0169)
+	f1-score:	0.6326 (0.0186)
+	precision:	0.7000 (0.0221)
+	recall:		0.6013 (0.0169)
+
+mix:
+
+	MCC: 0.2847:
+
+	AUC: 0.9302:
+              precision    recall  f1-score   support
+
+           B       0.42      0.21      0.28       300
+           V       0.98      0.99      0.99     11780
+
+    accuracy                           0.97     12080
+   macro avg       0.70      0.60      0.63     12080
+weighted avg       0.97      0.97      0.97     12080
+
+
+
+Process finished with exit code -1

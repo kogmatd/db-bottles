@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<!-- UASR: Unified Approach to Speech Synthesis and Recognition
+<    - Documentation home page
+<   
+<    AUTHOR : Matthias Wolff, Johannes Wawra
+<    PACKAGE: n/a
+<   
+<    Copyright 2013 UASR contributors (see COPYRIGHT file)
+<    - Chair of System Theory and Speech Technology, TU Dresden
+<    - Chair of Communications Engineering, BTU Cottbus
+<   
+<    This file is part of UASR.
+<   
+<    UASR is free software: you can redistribute it and/or modify it under the
+<    terms of the GNU Lesser General Public License as published by the Free
+<    Software Foundation, either version 3 of the License, or (at your option)
+<    any later version.
+<   
+<    UASR is distributed in the hope that it will be useful, but WITHOUT ANY
+<    WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+<    FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for 
+<    more details.
+<   
+<    You should have received a copy of the GNU Lesser General Public License
+<    along with UASR. If not, see [http://www.gnu.org/licenses/].
+  -->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>German Verbmobil Database Home Page</title>
+  <link rel=stylesheet type="text/css" href="default.css">
+</head>
+<script type="text/javascript">
+  if (top==self)
+	  top.location = "index.html";
+</script>
+<script type="text/javascript" src="default.js"></script>
+<body>
+  <a name="DocHome"></a>
+  <div id="clp_docHome">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td nowrap width="25%" class="navbar">
+          Acoustic Coin Classification Database
+        </td>
+        <td nowrap width="75%" class="navbar" style="text-align:right;">
+          <a class="navbar" href="javascript:__PrintSection('clp_docHome','Documentation Home Page','.');"><img src="resources/print.gif" width="16" height="16" border="0" style="vertical-align:middle;" alt="Print"></a> 
+          <a class="navbar" href="automatic/kwdindex.html">Keyword Index</a>
+          <a class="navbar" href="automatic/fncindex.html">Function Index</a>
+        </td>
+      </tr>
+    </table>
+    <div class="mframe">
+      <table width="100%" cellSpacing="0" cellPadding="6" border="0">
+        <tr>
+          <td width="50%">
+            <h3 style="margin-top:2pt; margin-bottom:2pt">Contents</h3>
+            <ul class="linklist">
+              <li class="linklist"><a href="#clp_docHome">Documentation Home Page</a></li>
+              <li class="linklist"><a href="#clp_introduction">Introduction</a></li>
+            </ul>
+          </td>
+          <td width="50%">
+            <h3 style="margin-top:2pt; margin-bottom:2pt">Links</h3>
+            <ul class="linklist">
+              <li class="linklist"><a href="automatic/kwdindex.html">Keyword Index</a></li>
+              <li class="linklist"><a href="automatic/fncindex.html">Alphabetical Index of Functions</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="mframe2">
+      This git repository is used for a live pattern recognition of coin sound signals. <br>
+      The coins are thrown into a bowl and the signal is recorded by a microphone array. <br>
+      The plan shows how to place the microphones and the bowl in 3 variations with 2 bowls.
+      The coins are thrown through the slot above the bowl. <br> <br>
+      <figure>
+     	<img src="resources/skizze Versuch1.png" width="750" alt="here should be a plan">
+      	<figcaption> Experiment 1 - with glas bowl and acrylic glas slot </figcaption>
+  	  </figure>
+  
+      <figure>
+     	<img src="resources/skizze Versuch2.png" width="750" alt="here should be a plan">
+      	<figcaption> Experiment 2 - with acrylic glass bowl with metal ground on rubber feet </figcaption>
+  	  </figure>
+  	  
+  	  <figure>
+     	<img src="resources/skizze Versuch3.png" width="750" alt="here should be a plan">
+      	<figcaption> Experiment 3 - with acrylic glass bowl with glas ground, rough side on top </figcaption>
+  	  </figure>
+      
+    </div>
+  </div>
+
+  <a name="How to perform live pattern recognition"></a>
+
+  <div id="clp_introduction">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td nowrap width="25%" class="navbar">
+          How to perform live pattern recognition
+        </td>
+        <td nowrap width="75%" class="navbar" style="text-align:right;">
+          <a class="navbar" href="javascript:__PrintSection('clp_introduction','Introduction','.');"><img src="resources/print.gif" width="16" height="16" border="0" style="vertical-align:middle;" alt="Print"></a> 
+          <a class="navbar" href="automatic/kwdindex.html">Keyword Index</a>
+          <a class="navbar" href="automatic/fncindex.html">Function Index</a>
+        </td>
+      </tr>
+    </table>
+    <div class="mframe2">
+  		  <!--{{ CUSTOM_DOC -->
+			  For prepairing a live experiment follow the steps below,
+			  if you have already trained models you can start at step 3.
+			  <ol>
+				  <li> Execute the FEA.xtp script in the directory of the actual experiment with following parameters:
+				   	<ul> 
+				  		<li> $1 ana </li>
+				  		<li> $2 C:\users\[USERNAME]\workspace\uasr-data\coins\[EXPERIMENTNAME]\info\HMM-trn.cfg </li>
+				  	</ul>
+				  	If you are using the windows command prompt, be sure to specify the absolute file path for FEA.xtp. <br>
+				  	Alternatively you can use the preset run configurations in eclipse, <br>
+				  	only be sure to take the correct one for the experiment.
+				  </li>
+				  <li> Execute the HMM.trn script in the same directory with following parameters: 
+				    <ul> 
+				  		<li> $1 trn </li>
+				  		<li> $2 C:\users\[USERNAME]\workspace\uasr-data\coins\[EXPERIMENTNAME]\info\HMM-trn.cfg </li>
+				  	</ul>
+				  	The 2nd Parameter has to be equal as in the FEA.xtp script, also be sure to use absolute file paths.
+				  	</li>
+				  
+				  <li> Execute the REC_PACKDATA.trn script in the same directory with following parameters: 
+				    <ul> 
+				  		<li> $1 rec </li>
+				  		<li> $2 info/REC_PACKDATA.cfg </li>
+				  		<li> $3 -v2 </li>
+				  	</ul>
+					The Path ($2) of the config-file is relative to the working directory and has to define the working model. 	
+				  	</li>
+				  
+				  <li> Start Scarlett MixControl for feedback setup
+				    <ol>
+   				        <li> turn the last volume knob (labeled with a phones icon) to a low level, e.g. "2" or "3" <BR>
+				             because the feedback can be dangerous for your ears if you are wearing the headphones </li>
+				        <li> if a connection error occurs, be sure that the power line is activated and the soundcard is running </li>
+				        <li> be sure that there is a feedback line  <BR> 
+				             from OUTPUT 1 at the back-side to INPUT 1 at the front </li>
+        				<li> be sure that the phones are plugged in the socket labeled with the phones icon </li>
+				      	<li> open LoopRec.8i6 </li>
+				      	<li> play a sound (longer sounds recommended) in windows, e.g. with the windows media player </li>
+				      	<li> turn the 1st knob (labeled GAIN) to optimal feedback level (should be at "8") </li>
+				      	<li> if the 1st and the last two volume indicators move if the sound is playing <BR> 
+				      	     and you do not hear a beep noise on the phones everything is fine. </li>
+				        <li> do not close Scarlett Mix Control, yet
+				    </ol>
+				    </li>
+				  <li> Start NI LabVIEW 2013 and open "Mikrofonfeld 3.1.vi" from path "C:\National Instruments Download"
+				    <ol>
+				        <li> go to the menu "Ansicht" and activate "Werkzeugpalette" </li>
+				        <li> choose the hand from the new window </li>
+				        <li> change "Anzahl der Aufnahmen" from 10 to 1000
+				    	<li> change modus from "getriggert" to "kontinuierlich" </li>
+				    	<li> activate 2nd blue button (the one with a triangle) so triangle turns green </li>
+				    	<li> turn the knob labeled "Volume Ausgabe" to 100 </li>
+				        <li> activate all 4 channels by pushing the red buttons labeled "Kanal X An/Aus" <br>
+				             (X stands for the channel number) so they turn green </li>
+				        <li> additional if you want to record define filepaths in "Speicherpfad Summe" and 
+				             "Speicherpfad Einzelaufnahme" and activate the 1st blue button so it turns red </li>
+				        <li> run the vi by clicking the arrow in the top left corner or select from menu "Ausführen" entry "starten" </li>
+				        <li> you shall now see some noise patterns in the 4 graphs on the left </li>
+				        <li> level "Verstärkung Summe" to "0,05" and in case of record level "Verstärkung Einzelkanäle" to "0,1", too </li>
+				        <li> now you can throw coins for test purposes into the bowl, <br>
+				             if you see now in the right graphs some signals, too and the level is not above 1 the signal should go out </li>
+				        <li> change to Scarlett Mix Control (do not stop the vi) and throw again coins into the bowl, <br>
+				             if the 1st and the last two volume indicator move everything is fine</li>
+				        <li> if you have an assistant you can check the correct signal level on the phones while he is throwing the coins </li>
+				        <li> now you can quit Scarlett Mix Control </li>
+				        <li> stop the vi by pressing the STOPP Button but do not close it </li>
+				    </ol>
+				    </li>
+				  <li> Start Eclipse and open java run configuration "CoinsRecognizer"
+				    <ol>
+				    	<li> alternatively you can open package "uasr-data-coins\src\de.tucottbus.kt.uasr_data_coins" <BR>
+				    	and run "CoinsRecognizer.java" </li>
+				    	<li> a gui should appear and show you a green circle - that means no coin is recognized.
+				    	<li> start the vi "Mikrofonfeld 3.1" </li>
+				    	<li> throw a coin in the bowl </li>
+				    	<li> the green circle should have changed to a photo of a coin </li>
+				    	<li> the questionmark indicates a refused recognition, the exclamation mark shows an accepted recognition </li>
+				    	<li> now you can perform the live recognition as long as "Mikrofonfeld 3.1.vi" runs
+				    </ol>
+				    </li>
+				   <li> after the experiment 
+				     <ul>
+				     	<li> you should close the gui by pressing the "X" on the caption </li>
+				     	<li> you have to exit CoinsRecognizer by typing "exit" + [Enter] into the Eclipse Console </li>
+				     	<li> you should stop "Mikrofonfeld 3.1.vi" </li>
+				     	<li> you can close LabVIEW and Eclipse </li>
+				     	<li> you can close Scarlett MixControl </li>
+				  	 	<li> you can power off the Sound Card at the power point </li>
+				  	 </ul>
+				  	 </li>
+			  </ol>
+		  <!--}} CUSTOM_DOC -->
+  		</span>
+    </div>
+  </div>
+
+  <div class="footer">End of page</div>
+
+</body>
+</html>
+

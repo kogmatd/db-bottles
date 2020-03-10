@@ -23,6 +23,12 @@ uasr.pfa                  = "UPFA";                                             
 uasr.pfa.wlen             = 400;                                                # Analysis window length [samples]
 uasr.pfa.len              = 512;                                                # Frame length
 
+#uasr.pfa.wlen=512;
+#uasr.pfa.crate=256;
+#uasr.pfa.UPFA.filtype="NONE";
+#uasr.pfa.UPFA.fmap="none";
+
+
 ## Acoustic model settings                                                      # -------------------------------------
 uasr.am.train.split       = 5;                                                  # Number of splits
 uasr.am.train.ite0        = 3;                                                  # Number of iterations at split 0

@@ -22,6 +22,9 @@ uasr.sig.srate            = 48000;                                              
 uasr.pfa                  = "UPFA";                                             # Universal primary analysis
 uasr.pfa.wlen             = 400;                                                # Analysis window length [samples]
 uasr.pfa.len              = 512;                                                # Frame length
+uasr.sfa     = "std,delta,pca,red";
+uasr.sfa.dim = 32;
+
 
 ## Acoustic model settings                                                      # -------------------------------------
 uasr.am.train.split       = 5;                                                  # Number of splits
@@ -49,11 +52,13 @@ uasr.am.gbg               = -1;                                                 
 #uasr.recfix.nrm.pca       = 16;
 uasr.recfix.trg.mode      = 0;
 
-uasr.flist.cv = "cross"
+uasr.flist.all = "V"
 
 #uasr.labmap="{'B' : 'D', 'D' : 'D', 'V' : 'V' }"
 
-uasr.trn.folds = 5
+uasr.trn.folds = 3
+uasr.trn.repetitions = 5
+uasr.fnconv = "{'name' : (0,4)}"
 
 ## HMMs
 uasr.trnargs.hmm.pfa = "{'states':1, 'its': [0]}

@@ -79,6 +79,32 @@ bottles                                      # Wurzelverzeichnis der Datenbasis
 |   |   \---Versuch004_C.mcfg                # die mcfg-Datei sollte als einzige für einen neuen Versuch editiert werden
 |   +---log                                  # hier können Informationen zum Training und den Modellen mit dem MiSIS-Plugin abgerufen werden
 |   \---model                                # hier werden die eigentlichen Model-Daten gespeichert, die für eine Erkennung nötig sind
++---Versuch004_D
+|   +---flists                               # Verzeichnis mit den Filelisten fuers Training des aktuellen Versuchs
+|   |   +---all.flst                         # Filelist für alle dem Experiment angehörigen Dateien
+|   |   +---test.flst                        # zum Test gehörige Dateien
+|   |   \---train.flst                       # Dateien für Training, dürfen keine Test-Dateien enthalten
+|   +---info                                 # Konfigurationsdateien fuer HMM-Training
+|   |   +---classes.txt
+|   |   \---Versuch004_D.mcfg                # die mcfg-Datei sollte als einzige für einen neuen Versuch editiert werden
+|   +---log                                  # hier können Informationen zum Training und den Modellen mit dem MiSIS-Plugin abgerufen werden
+|   \---model                                # hier werden die eigentlichen Model-Daten gespeichert, die für eine Erkennung nötig sind
++---Versuch004_E
+|   +---flists                               # Verzeichnis mit den Filelisten fuers Training des aktuellen Versuchs
+|   |   +---V1B1.flst                        # E3 test data
+|   |   +---V1V2B1B2.flst                    # E1 training data
+|   |   +---V1V3B1B3.flst                    # E2 training data
+|   |   +---V2B2.flst                        # E2 test data
+|   |   +---V2V3B2B3.flst                    # E3 training data
+|   |   +---V3B3.flst                        # E1 test data
+|   |   \---README.txt                       # Specimen group division
+|   +---info                                 # Konfigurationsdateien fuer HMM-Training
+|   |   +---classes.txt
+|   |   +---Versuch004_E1.mcfg               # die mcfg-Datei sollte als einzige für einen neuen Versuch editiert werden
+|   |   +---Versuch004_E2.mcfg               # die mcfg-Datei sollte als einzige für einen neuen Versuch editiert werden
+|   |   \---Versuch004_E3.mcfg               # die mcfg-Datei sollte als einzige für einen neuen Versuch editiert werden
+|   +---log                                  # hier können Informationen zum Training und den Modellen mit dem MiSIS-Plugin abgerufen werden
+|   \---model                                # hier werden die eigentlichen Model-Daten gespeichert, die für eine Erkennung nötig sind
 +---Vorversuch001_A
 +---Vorversuch001_B
 +---Vorversuch001_C                          # für jeden (Vor-)Versuch wurden 3 Experimente durchgeführt:             
